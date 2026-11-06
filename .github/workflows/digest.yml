@@ -1,0 +1,56 @@
+name: Daily threat digest
+
+on:
+  schedule:
+    # 11:17 UTC = about 6:17 AM Eastern in winter, 7:17 AM in summer.
+    # (Off the full hour on purpose: scheduled jobs at :00 are often delayed.)
+    - cron: "17 11 * * *"
+  workflow_dispatch:        # "Run workflow" button in the Actions tab
+  push:
+    branches: [main]
+    paths:                  # rebuild when you publish a post or change the code/config
+      - "posts/**"
+      - "config.yaml"
+      - "digest.py"
+      - "docs/style.css"
+      - "docs/filter.js"
+
+# Least privilege: the job may only write repository contents (to commit the new digest).
+permissions:
+  contents: write
+
+# Never run two jobs at once (prevents conflicting commits).
+concurrency:
+  group: digest
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Collect sources and build the site
+        run: python digest.py
+
+      - name: Commit the new digest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data docs
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Digest $(date -u +%Y-%m-%d)"
+            git pull --rebase   # in case you pushed a post while the job was running
+            git push
+          fi
