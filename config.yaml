@@ -1,0 +1,64 @@
+# Threat digest configuration
+# Edit this file to change sources, tags and your watchlist.
+
+site:
+  title: Threat digest
+  author: Shanna Staartjes
+  description: Daily security news and actively exploited vulnerabilities, collected automatically. Weekly analysis written by me.
+  timezone: America/New_York
+
+# Only keep feed items published in the last N hours (the job runs daily).
+lookback_hours: 48
+
+# Show CISA KEV entries added in the last N days.
+kev_days: 7
+
+# RSS/Atom feeds. "id" must be unique and use only letters, numbers and dashes.
+# If a feed URL stops working, the run continues and the failure shows on the site.
+feeds:
+  - id: cisa-advisories
+    name: CISA advisories
+    url: https://www.cisa.gov/cybersecurity-advisories/all.xml
+  - id: msrc
+    name: Microsoft Security Response Center
+    url: https://msrc.microsoft.com/blog/feed
+  - id: microsoft-security-blog
+    name: Microsoft Security blog
+    url: https://www.microsoft.com/en-us/security/blog/feed/
+  - id: bleepingcomputer
+    name: BleepingComputer
+    url: https://www.bleepingcomputer.com/feed/
+  - id: the-hacker-news
+    name: The Hacker News
+    url: https://feeds.feedburner.com/TheHackersNews
+  - id: krebs
+    name: Krebs on Security
+    url: https://krebsonsecurity.com/feed/
+  - id: sans-isc
+    name: SANS Internet Storm Center
+    url: https://isc.sans.edu/rssfeed.xml
+
+# Tags are added when any keyword appears in an item's title or summary (case-insensitive).
+tags:
+  ransomware: [ransomware, extortion, lockbit, akira, encryptor]
+  phishing: [phishing, phish, smishing, vishing, credential harvesting, fake login]
+  cloud/M365: [microsoft 365, m365, office 365, entra, azure, sharepoint, exchange online, onedrive, outlook, teams]
+  vulnerability: [cve-, vulnerability, vulnerabilities, zero-day, 0-day, exploit, exploited, patch, patches, flaw]
+  data breach: [breach, data leak, leaked, exposed data, stolen data]
+  malware: [malware, trojan, infostealer, stealer, botnet, backdoor, loader, rat]
+  identity: [mfa, password, credentials, session token, oauth, sso, account takeover]
+  AI: [llm, prompt injection, ai agent, ai model, chatgpt, copilot, deepfake]
+
+# Watchlist: technology you care about. Matches are highlighted and counted.
+watchlist:
+  - microsoft 365
+  - windows
+  - exchange
+  - entra
+  - chrome
+  - edge
+  - fortinet
+  - cisco
+  - palo alto
+  - vpn
+  - power platform

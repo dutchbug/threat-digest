@@ -1,0 +1,56 @@
+{
+  "title": "Example KEV data for offline tests (fictional entries)",
+  "catalogVersion": "2026.11.05",
+  "dateReleased": "2026-11-05T14:00:00.000Z",
+  "count": 4,
+  "vulnerabilities": [
+    {
+      "cveID": "CVE-2026-90001",
+      "vendorProject": "ExampleCorp",
+      "product": "SecureGate VPN",
+      "vulnerabilityName": "ExampleCorp SecureGate VPN Authentication Bypass Vulnerability",
+      "dateAdded": "2026-11-05",
+      "shortDescription": "Fictional test entry: an authentication bypass lets a remote attacker log in without credentials.",
+      "requiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+      "dueDate": "2026-11-26",
+      "knownRansomwareCampaignUse": "Known",
+      "notes": ""
+    },
+    {
+      "cveID": "CVE-2026-90002",
+      "vendorProject": "Microsoft",
+      "product": "Windows",
+      "vulnerabilityName": "Microsoft Windows Privilege Escalation Vulnerability",
+      "dateAdded": "2026-11-03",
+      "shortDescription": "Fictional test entry: a local attacker can gain SYSTEM privileges.",
+      "requiredAction": "Apply updates per vendor instructions.",
+      "dueDate": "2026-11-24",
+      "knownRansomwareCampaignUse": "Unknown",
+      "notes": ""
+    },
+    {
+      "cveID": "not-a-cve\"><script>alert(1)</script>",
+      "vendorProject": "Bad",
+      "product": "Data",
+      "vulnerabilityName": "Malformed entry that should be skipped",
+      "dateAdded": "2026-11-05",
+      "shortDescription": "",
+      "requiredAction": "",
+      "dueDate": "",
+      "knownRansomwareCampaignUse": "Unknown",
+      "notes": ""
+    },
+    {
+      "cveID": "CVE-2025-80000",
+      "vendorProject": "OldVendor",
+      "product": "OldProduct",
+      "vulnerabilityName": "Old entry outside the window",
+      "dateAdded": "2025-06-01",
+      "shortDescription": "Should be skipped.",
+      "requiredAction": "",
+      "dueDate": "",
+      "knownRansomwareCampaignUse": "Unknown",
+      "notes": ""
+    }
+  ]
+}

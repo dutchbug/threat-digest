@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Fictional test data for offline runs. Not real news. -->
+<rss version="2.0">
+<channel>
+  <title>Example news feed</title>
+  <link>https://example.com/</link>
+  <item>
+    <title>Example: phishing campaign uses fake Microsoft 365 login pages</title>
+    <link>https://example.com/news/phishing-m365?utm_source=rss</link>
+    <description>Attackers send invoice lures and harvest credentials on a fake login page.</description>
+    <pubDate>Thu, 05 Nov 2026 09:15:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Example: ransomware group claims attack on regional hospital</title>
+    <link>https://example.com/news/ransomware-hospital</link>
+    <description>The group says it stole data and encrypted systems.</description>
+    <pubDate>Wed, 04 Nov 2026 22:40:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Example: phishing campaign uses fake Microsoft 365 login pages (updated)</title>
+    <link>https://example.com/news/phishing-m365/?utm_campaign=x</link>
+    <description>Same article, different URL. Should be removed as a duplicate.</description>
+    <pubDate>Thu, 05 Nov 2026 09:20:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>&lt;script&gt;alert(1)&lt;/script&gt; Example: malicious title test</title>
+    <link>javascript:alert(document.cookie)</link>
+    <description>Should be dropped because the link is not http(s).</description>
+    <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Example: &lt;b&gt;pirate&lt;/b&gt; radio station back online</title>
+    <link>https://example.com/news/pirate-radio</link>
+    <description>Checks that short keywords only match whole words.</description>
+    <pubDate>Thu, 05 Nov 2026 07:30:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Example: old story outside the lookback window</title>
+    <link>https://example.com/news/old</link>
+    <description>Should be skipped.</description>
+    <pubDate>Sun, 01 Nov 2026 07:30:00 GMT</pubDate>
+  </item>
+</channel>
+</rss>
