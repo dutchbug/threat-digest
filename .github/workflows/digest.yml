@@ -15,9 +15,9 @@ on:
       - "docs/style.css"
       - "docs/filter.js"
 
-# Least privilege: the job may only write repository contents (to commit the new digest).
+# Least privilege: read-only by default; each job gets only what it needs.
 permissions:
-  contents: write
+  contents: read
 
 # Never run two jobs at once (prevents conflicting commits).
 concurrency:
@@ -28,6 +28,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: write       # to commit the new digest data
     steps:
       - uses: actions/checkout@v6
 
@@ -54,3 +56,23 @@ jobs:
             git pull --rebase   # in case you pushed a post while the job was running
             git push
           fi
+
+      - name: Package the website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write          # to publish the site
+      id-token: write       # to prove the deployment comes from this workflow
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
