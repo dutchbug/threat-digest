@@ -1,6 +1,6 @@
 # Threat digest
 
-An automated threat intelligence digest. Every morning it collects security news, vendor threat research, government advisories, and newly added **actively exploited vulnerabilities** (CISA KEV) from 18 sources. It removes duplicates, tags items by topic, sector and regulation, highlights technology on my watchlist, and publishes a static website with filters and saved **profiles** (for example *Healthcare / HIPAA* or *SOC analyst*). Every week I add my own analysis of the most important stories.
+An automated threat intelligence digest. Every morning it collects security news, vendor threat research, government advisories, and newly added **actively exploited vulnerabilities** (CISA KEV) from 18 sources. It removes duplicates, **groups the same story from different outlets into one entry**, tags items by topic, sector and regulation, highlights technology on my watchlist, and publishes a static website with filters and saved **profiles** (for example *Healthcare / HIPAA* or *SOC analyst*). Every week I add my own analysis of the most important stories.
 
 **Live site:** https://dutchbug.github.io/threat-digest/
 
@@ -26,9 +26,10 @@ flowchart LR
 
 1. **Collect:** a scheduled GitHub Actions job runs `digest.py`, which downloads the RSS feeds and the CISA Known Exploited Vulnerabilities catalog.
 2. **Process:** items older than the lookback window are skipped. Duplicates are removed: the same link with different tracking parameters counts as one item, and items published on earlier days are not shown again. Each item is tagged by keyword in three groups (**topics** such as ransomware or phishing, **sectors** such as healthcare or finance, and **regulations** such as HIPAA or PCI DSS), gets its source type (news, threat research, government, analysis), and is checked against my watchlist.
-3. **Store:** results are saved as JSON per day in `data/daily/`, so the history is versioned in Git.
-4. **Publish:** the script generates the site in `docs/`, and the deploy job publishes it to GitHub Pages. Pages: today, last 7 days, archive, weekly analysis, about.
-5. **Monitor:** each page shows a *Source status* panel listing which feeds worked. One broken feed doesn't stop the run.
+3. **Group stories:** when several outlets cover the same story, it's shown once with "Also covered by…". Two articles are grouped when they mention the same CVE ID, or when their headlines share at least 3 meaningful words with at least 40% overlap (common words like *attack*, *flaw* or *hackers* are ignored), published within 72 hours of each other. The main article comes from the source listed first in `config.yaml`.
+4. **Store:** results are saved as JSON per day in `data/daily/`, so the history is versioned in Git.
+5. **Publish:** the script generates the site in `docs/`, and the deploy job publishes it to GitHub Pages. Pages: today, last 7 days, archive, weekly analysis, about.
+6. **Monitor:** each page shows a *Source status* panel: which feeds worked, how many new items each had, and the date of each feed's newest post. A feed whose newest post is over 30 days old is flagged as *stale* (the address probably changed). Timeouts and connection errors are retried once; one broken feed never stops the run.
 
 ## Filters and profiles
 
@@ -40,6 +41,8 @@ The filter panel narrows the list by topic, sector, regulation and source type, 
 - **My profiles:** select filters, name them, and save. They're stored in the browser (localStorage), so no account or backend is needed. The last used profile is re-applied on the next visit.
 - **Shareable links:** the current filters are kept in the URL, so *Copy link* opens the same view on another device.
 - **New since last visit:** items published since your previous visit get a *new* badge.
+- **Compact view:** headlines only, for a quick scan. The setting is remembered.
+- **Readability:** newest first with day separators on the *Last 7 days* page, watchlist matches marked with an amber edge, the 3 most relevant KEV entries shown with the rest behind *Show more*, and the detailed filters folded away with a summary of what's active.
 
 Sector and regulation tags come from keyword matching. They're hints for triage, not a compliance assessment.
 
@@ -118,12 +121,12 @@ Edit `config.yaml`:
 
 ## Changelog
 
+- **v1.2:** story grouping across outlets ("3 sources", "Also covered by…"); source monitoring shows each feed's newest post and flags stale feeds; one retry on timeouts; readability: day separators, compact view, collapsible filters with active-filter summary, KEV "show more", section counts.
 - **v1.1:** 18 sources with source types and a separate threat research section; sector and regulation tagging; filter panel with preset and custom profiles, shareable links and search; *Last 7 days* page; *new since last visit* badges; deployment through the workflow's own deploy job (least privilege per job). Removed CISA advisories (blocks automated requests from cloud servers; KEV data is still used) and the MSRC blog (invalid XML feed), both found through the Source status panel.
 - **v1.0:** daily collection, KEV, tagging, watchlist, static site, weekly posts.
 
 ## Roadmap
 
-- [ ] Group the same story from several outlets ("covered by 5 sources")
 - [ ] Alerts (email or Discord) when a watchlist item appears in KEV
 - [ ] Trend page: KEV additions per month, top vendors, tag counts
 - [ ] MITRE ATT&CK technique tagging

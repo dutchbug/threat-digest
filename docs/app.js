@@ -7,6 +7,7 @@
   var KEY_PROFILES = "td-profiles";   // custom profiles saved in this browser
   var KEY_LAST = "td-last-profile";   // profile to re-apply on the next visit
   var KEY_VISIT = "td-last-visit";    // time of the previous visit
+  var KEY_COMPACT = "td-compact";     // compact view on/off
 
   // localStorage can be unavailable (private mode, blocked storage), so every access is wrapped.
   function load(key, fallback) {
@@ -34,6 +35,17 @@
     });
     var note = $("new-since");
     if (note && newCount) note.textContent = "· " + newCount + " new since your last visit";
+  }
+
+  // ---- Compact view (headlines only) -----------------------------------------------
+  var compact = $("compact-view");
+  if (load(KEY_COMPACT, false) === true) document.body.classList.add("compact");
+  if (compact) {
+    compact.checked = document.body.classList.contains("compact");
+    compact.addEventListener("change", function () {
+      document.body.classList.toggle("compact", compact.checked);
+      store(KEY_COMPACT, compact.checked);
+    });
   }
 
   // ---- Filters ---------------------------------------------------------------------
@@ -148,6 +160,16 @@
     });
     kevCards.forEach(function (card) { card.hidden = !basicMatch(card); });
 
+    // Hide a day separator when none of the stories under it are visible.
+    document.querySelectorAll(".day-sep").forEach(function (sep) {
+      var el = sep.nextElementSibling, any = false;
+      while (el && !el.classList.contains("day-sep")) {
+        if (!el.hidden) { any = true; break; }
+        el = el.nextElementSibling;
+      }
+      sep.hidden = !any;
+    });
+
     document.querySelectorAll(".empty-msg").forEach(function (p) {
       var list = $(p.getAttribute("data-for"));
       p.hidden = !list || list.querySelector(".card:not([hidden])") !== null;
@@ -167,9 +189,14 @@
     select.value = current;
     $("profile-delete").hidden = current.indexOf("custom:") !== 0;
 
+    var active = [];
+    GROUPS.forEach(function (g) { active = active.concat(state[g]); });
+    var summary = active.length ? active.join(", ") + (active.length > 1 ? " (" + (state.match === "all" ? "every group" : "any") + ")" : "") : "";
+    $("active-summary").textContent = summary ? "· " + summary : "";
+
     var status = $("filter-status");
     var filtered = shown !== items.length;
-    status.textContent = filtered ? "Showing " + shown + " of " + items.length + " items" : "";
+    status.textContent = filtered ? "Showing " + shown + " of " + items.length + " stories" : "";
 
     // Keep the URL shareable: the current filters live in the address bar.
     var isEmpty = sameState(state, emptyState());

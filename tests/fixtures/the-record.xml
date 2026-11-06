@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Fictional test data for offline runs. Not real news. -->
+<rss version="2.0"><channel><title>Example news 2</title><link>https://example.net/</link>
+  <item>
+    <title>FortiGate zero-day exploited in the wild, Fortinet warns customers</title>
+    <link>https://example.net/fortigate-zero-day-exploited</link>
+    <description>Same story as another outlet. Should be grouped.</description>
+    <pubDate>Thu, 05 Nov 2026 09:40:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Fortinet reports record quarterly revenue</title>
+    <link>https://example.net/fortinet-revenue</link>
+    <description>Same vendor, different story. Should NOT be grouped.</description>
+    <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Microsoft Teams phishing campaign impersonates IT help desk</title>
+    <link>https://example.net/teams-phishing</link>
+    <description>Different Microsoft story. Should NOT be grouped with the Windows SMB one.</description>
+    <pubDate>Thu, 05 Nov 2026 05:00:00 GMT</pubDate>
+  </item>
+</channel></rss>

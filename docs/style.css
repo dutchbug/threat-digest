@@ -82,3 +82,29 @@ h2 { font-size: 19px; margin: 32px 0 10px; font-weight: 600; }
 .health td { padding: 4px 12px 4px 0; vertical-align: top; }
 .plain { padding-left: 18px; }
 footer { margin-top: 48px; padding-top: 16px; padding-bottom: 32px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); }
+
+/* v1.2: stories, readability */
+.stat small { display: block; font-size: 12px; color: var(--muted); }
+.h-count { font-size: 14px; font-weight: 500; color: var(--muted); background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 1px 9px; vertical-align: middle; margin-left: 4px; }
+.card .meta { color: var(--muted); font-size: 14px; }
+.card .desc { color: var(--muted); font-size: 14px; margin: 6px 0 0; }
+.card.watched { border-left: 3px solid var(--warning); }
+.sources-count { display: inline-block; margin-left: 6px; font-size: 12px; padding: 1px 8px; border-radius: 999px; background: var(--accent-bg); color: var(--accent); }
+.also { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.also a { color: var(--muted); }
+.also a:hover { color: var(--accent); }
+.day-sep { list-style: none; font-size: 13px; font-weight: 600; color: var(--muted); text-transform: none; padding: 10px 2px 0; border-bottom: 1px solid var(--border); }
+details.more { margin-top: 10px; }
+details.more > summary, #more-filters > summary, .health > summary { cursor: pointer; color: var(--accent); font-size: 14px; }
+details.more > .list { margin-top: 10px; }
+#more-filters > summary { color: var(--text); }
+.filter-body { display: grid; gap: 12px; margin-top: 12px; }
+.spacer { flex: 1; }
+.compact .card { padding: 8px 12px; }
+.compact .card .badges .badge:not(.new), .compact .also, .compact .card .desc { display: none; }
+.compact .list { gap: 6px; }
+@media (max-width: 600px) {
+  .filter-panel select { min-width: 0; flex: 1 1 100%; }
+  .spacer { display: none; }
+}
+.compact .badges { margin-top: 2px; }
