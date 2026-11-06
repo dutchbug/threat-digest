@@ -13,7 +13,7 @@
   <item>
     <title>Example: ransomware group claims attack on regional hospital</title>
     <link>https://example.com/news/ransomware-hospital</link>
-    <description>The group says it stole data and encrypted systems.</description>
+    <description>The group says it stole patient data and encrypted systems. The hospital notified HHS under HIPAA breach notification rules.</description>
     <pubDate>Wed, 04 Nov 2026 22:40:00 GMT</pubDate>
   </item>
   <item>
@@ -33,6 +33,18 @@
     <link>https://example.com/news/pirate-radio</link>
     <description>Checks that short keywords only match whole words.</description>
     <pubDate>Thu, 05 Nov 2026 07:30:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Example: card skimmer found on online store checkout pages</title>
+    <link>https://example.com/news/skimmer</link>
+    <description>Magecart-style malware stole cardholder data, raising PCI DSS questions for the retailer.</description>
+    <pubDate>Thu, 05 Nov 2026 10:05:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Example: security teams share their outlook for the year</title>
+    <link>https://example.com/news/outlook</link>
+    <description>Checks that generic words like teams and outlook do not get a cloud tag.</description>
+    <pubDate>Thu, 05 Nov 2026 06:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Example: old story outside the lookback window</title>

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Threat digest: collect security news and CISA KEV data, tag it, and build a static website.
+"""Threat digest: collect security news, research and CISA KEV data, tag it, and build a static website.
 
 Usage:
     python digest.py                                  # live feeds (what GitHub Actions runs)
     python digest.py --fixtures tests/fixtures --now 2026-11-05T12:00:00Z   # offline test data
+    python digest.py --build-only                     # rebuild the site from saved data
 
 Output:
     data/daily/YYYY-MM-DD.json   collected items per day (the history)
@@ -41,6 +42,14 @@ TIMEOUT = 20          # seconds per request
 SEEN_DAYS = 30        # how long to remember published items
 CVE_RE = re.compile(r"^CVE-\d{4}-\d{4,}$")
 TRACKING_PARAM = re.compile(r"^(utm_|fbclid$|gclid$|mc_)")
+
+# Filter groups: (key in item data, key in config, label on the site)
+GROUPS = [
+    ("tags", "tags", "Topics"),
+    ("sectors", "sectors", "Sectors"),
+    ("regulations", "regulations", "Regulations and standards"),
+]
+SOURCE_TYPES = {"news": "News", "research": "Threat research", "government": "Government", "analysis": "Analysis"}
 
 
 # ---------------------------------------------------------------------------
@@ -80,7 +89,7 @@ def compile_keywords(words: list[str]) -> re.Pattern | None:
     """Build one case-insensitive regex that matches whole words (so 'rat' doesn't match 'pirate')."""
     parts = []
     for word in words:
-        word = word.lower().strip()
+        word = str(word).lower().strip()
         if not word:
             continue
         pattern = re.escape(word)
@@ -90,6 +99,11 @@ def compile_keywords(words: list[str]) -> re.Pattern | None:
             pattern += r"(?![a-z0-9])"
         parts.append(pattern)
     return re.compile("|".join(parts)) if parts else None
+
+
+def json_for_script(data) -> str:
+    """JSON that is safe to place inside a <script> element (no '</script>' breakout)."""
+    return json.dumps(data, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
 
 
 def load_json(path: Path, default):
@@ -116,22 +130,45 @@ def fetch(source_id: str, url: str, fixtures: Path | None, suffix: str) -> bytes
 
 
 # ---------------------------------------------------------------------------
-# Collect
+# Tagging
 # ---------------------------------------------------------------------------
 
 class Tagger:
+    """Keyword tagging for topics, sectors, regulations and the watchlist."""
+
     def __init__(self, cfg: dict):
-        self.tags = {name: compile_keywords(words) for name, words in cfg.get("tags", {}).items()}
+        self.groups = {
+            key: {name: compile_keywords(words) for name, words in (cfg.get(cfg_key) or {}).items()}
+            for key, cfg_key, _ in GROUPS
+        }
         self.watch = {term: compile_keywords([term]) for term in cfg.get("watchlist", [])}
 
-    def tag(self, text: str) -> list[str]:
+    def analyze(self, text: str) -> dict:
         text = text.lower()
-        return [name for name, rx in self.tags.items() if rx and rx.search(text)]
+        result = {key: [name for name, rx in rules.items() if rx and rx.search(text)]
+                  for key, rules in self.groups.items()}
+        result["watch"] = [term for term, rx in self.watch.items() if rx and rx.search(text)]
+        return result
 
-    def watch_hits(self, text: str) -> list[str]:
-        text = text.lower()
-        return [term for term, rx in self.watch.items() if rx and rx.search(text)]
 
+def feed_types(cfg: dict) -> dict:
+    return {f["name"]: f.get("type", "news") for f in cfg.get("feeds", [])}
+
+
+def enrich(item: dict, tagger: Tagger, types: dict) -> dict:
+    """Fill fields that older data files don't have yet (tags from the title only)."""
+    missing = [k for k, _, _ in GROUPS if k not in item] + (["watch"] if "watch" not in item else [])
+    if missing:
+        found = tagger.analyze(item["title"])
+        for key in missing:
+            item[key] = found[key]
+    item.setdefault("type", types.get(item.get("source"), "news"))
+    return item
+
+
+# ---------------------------------------------------------------------------
+# Collect
+# ---------------------------------------------------------------------------
 
 def entry_time(entry) -> datetime | None:
     for key in ("published_parsed", "updated_parsed"):
@@ -158,17 +195,17 @@ def collect_feeds(cfg: dict, tagger: Tagger, fixtures: Path | None, now: datetim
                 published = min(entry_time(entry) or now, now)  # clamp future dates
                 if published < cutoff:
                     continue
-                # The summary is only used for tagging. It is NOT republished (copyright):
+                # The summary is only used for tagging. It is NOT stored or republished (copyright):
                 # the site shows the headline, source and a link to the original.
-                text = f"{title} {clean_text(entry.get('summary', ''))}"
+                found = tagger.analyze(f"{title} {clean_text(entry.get('summary', ''))}")
                 items.append({
                     "id": item_id(link),
                     "title": title[:300],
                     "link": link,
                     "source": feed["name"],
+                    "type": feed.get("type", "news"),
                     "published": published.isoformat(),
-                    "tags": tagger.tag(text),
-                    "watch": tagger.watch_hits(text),
+                    **found,
                 })
                 status["items"] += 1
         except Exception as exc:  # one broken feed must not stop the whole run
@@ -203,7 +240,7 @@ def collect_kev(cfg: dict, tagger: Tagger, fixtures: Path | None, today: date):
                 "added": added.isoformat(),
                 "due": vuln.get("dueDate", ""),
                 "ransomware": vuln.get("knownRansomwareCampaignUse", "") == "Known",
-                "watch": tagger.watch_hits(text),
+                "watch": tagger.analyze(text)["watch"],
             })
         entries.sort(key=lambda v: (v["added"], v["cve"]), reverse=True)
         status["items"] = len(entries)
@@ -249,12 +286,40 @@ def update_data(cfg: dict, fixtures: Path | None, now: datetime) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Profiles
+# ---------------------------------------------------------------------------
+
+def load_profiles(cfg: dict) -> list[dict]:
+    """Read preset profiles from config and warn about names that don't exist."""
+    known = {
+        "topics": set(cfg.get("tags") or {}),
+        "sectors": set(cfg.get("sectors") or {}),
+        "regulations": set(cfg.get("regulations") or {}),
+        "types": set(SOURCE_TYPES),
+    }
+    profiles = []
+    for raw in cfg.get("profiles") or []:
+        profile = {"name": str(raw.get("name", "Unnamed")), "match": "all" if raw.get("match") == "all" else "any",
+                   "watch": bool(raw.get("watch", False)), "q": str(raw.get("search", ""))}
+        for group, names in known.items():
+            values = [str(v) for v in raw.get(group) or []]
+            unknown = [v for v in values if v not in names]
+            if unknown:
+                print(f"warning: profile '{profile['name']}': unknown {group}: {unknown}", file=sys.stderr)
+            profile[group] = [v for v in values if v in names]
+        profiles.append(profile)
+    return profiles
+
+
+# ---------------------------------------------------------------------------
 # Build the website
 # ---------------------------------------------------------------------------
 
-def page(cfg: dict, title: str, body: str, depth: int = 0) -> str:
+def page(cfg: dict, title: str, body: str, depth: int = 0, profiles: list | None = None) -> str:
     root = "../" * depth
     site = cfg["site"]
+    profile_data = (f'<script type="application/json" id="profiles-data">{json_for_script(profiles)}</script>\n'
+                    if profiles is not None else "")
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -271,6 +336,7 @@ def page(cfg: dict, title: str, body: str, depth: int = 0) -> str:
   <a class="brand" href="{root}index.html">{esc(site['title'])}</a>
   <nav>
     <a href="{root}index.html">Today</a>
+    <a href="{root}recent.html">Last 7 days</a>
     <a href="{root}archive/index.html">Archive</a>
     <a href="{root}weekly/index.html">Weekly analysis</a>
     <a href="{root}about.html">About</a>
@@ -281,9 +347,9 @@ def page(cfg: dict, title: str, body: str, depth: int = 0) -> str:
 </main>
 <footer>
   <p>Built by {esc(site.get('author', ''))}. Headlines link to the original sources; summaries are not republished.
-  Vulnerability data: CISA Known Exploited Vulnerabilities catalog.</p>
+  Vulnerability data: CISA Known Exploited Vulnerabilities catalog. Sector and regulation tags are keyword-based hints, not compliance advice.</p>
 </footer>
-<script src="{root}filter.js"></script>
+{profile_data}<script src="{root}app.js"></script>
 </body>
 </html>
 """
@@ -298,24 +364,92 @@ def badge(text: str, kind: str = "tag") -> str:
     return f'<span class="badge {kind}">{esc(text)}</span>'
 
 
-def render_day(cfg: dict, day: dict, tz: ZoneInfo) -> str:
-    items, kev = day.get("items", []), day.get("kev", [])
-    watch_count = sum(bool(i["watch"]) for i in items) + sum(bool(v["watch"]) for v in kev)
+def render_filters(cfg: dict, items: list[dict]) -> str:
+    """Filter panel. Hidden until app.js runs, so the page still works without JavaScript."""
+    groups_html = []
+    for key, cfg_key, label in GROUPS:
+        chips = []
+        for name in (cfg.get(cfg_key) or {}):
+            count = sum(name in i.get(key, []) for i in items)
+            chips.append(f'<button type="button" class="chip{" empty" if not count else ""}" data-group="{"topics" if key == "tags" else key}" '
+                         f'data-value="{esc(name)}" aria-pressed="false">{esc(name)} <span class="count">{count}</span></button>')
+        groups_html.append(f'<div class="chip-group"><span class="group-label">{esc(label)}</span><div class="chips">{"".join(chips)}</div></div>')
+    type_chips = "".join(
+        f'<button type="button" class="chip" data-group="types" data-value="{esc(t)}" aria-pressed="false">{esc(label)} '
+        f'<span class="count">{sum(i.get("type") == t for i in items)}</span></button>'
+        for t, label in SOURCE_TYPES.items())
+    groups_html.append(f'<div class="chip-group"><span class="group-label">Source type</span><div class="chips">{type_chips}</div></div>')
+
+    return f"""<section class="filter-panel" id="filters" hidden aria-label="Filters">
+  <div class="filter-row">
+    <label for="profile-select" class="group-label">Profile</label>
+    <select id="profile-select"></select>
+    <button type="button" id="profile-delete" hidden>Delete profile</button>
+    <button type="button" id="copy-link">Copy link</button>
+    <button type="button" id="clear-filters">Clear filters</button>
+  </div>
+  <div class="filter-row">
+    <input type="search" id="filter-search" placeholder="Search headlines, for example fortinet" aria-label="Search headlines">
+    <label class="inline"><input type="checkbox" id="filter-watch"> Watchlist only</label>
+    <span class="inline match" role="radiogroup" aria-label="Match mode">Match
+      <label class="inline"><input type="radio" name="match" value="any" checked> any filter</label>
+      <label class="inline"><input type="radio" name="match" value="all"> every group</label>
+    </span>
+  </div>
+  {"".join(groups_html)}
+  <div class="filter-row">
+    <input type="text" id="profile-name" maxlength="60" placeholder="Name this filter set, for example Healthcare SOC" aria-label="Profile name">
+    <button type="button" id="profile-save">Save as profile</button>
+    <span id="profile-msg" class="msg" role="status"></span>
+  </div>
+  <p class="hint">Saved profiles are stored in this browser only. Use "Copy link" to open the same filters on another device.
+  Sector and regulation tags are keyword-based hints, not a compliance assessment.</p>
+</section>
+<p id="filter-status" class="muted" role="status"></p>"""
+
+
+def render_item(item: dict, tz: ZoneInfo) -> str:
+    badges = ("".join(badge(t) for t in item.get("tags", []))
+              + "".join(badge(s, "sector") for s in item.get("sectors", []))
+              + "".join(badge(r, "reg") for r in item.get("regulations", []))
+              + "".join(badge(w, "watch") for w in item.get("watch", [])))
+    attrs = {
+        "data-topics": "|".join(item.get("tags", [])),
+        "data-sectors": "|".join(item.get("sectors", [])),
+        "data-regulations": "|".join(item.get("regulations", [])),
+        "data-type": item.get("type", "news"),
+        "data-watch": "1" if item.get("watch") else "0",
+        "data-search": f"{item['title']} {item['source']}".lower(),
+        "data-published": item["published"],
+    }
+    attr_html = " ".join(f'{k}="{esc(v)}"' for k, v in attrs.items())
+    type_label = SOURCE_TYPES.get(item.get("type", "news"), "News")
+    return f"""<li class="card item" {attr_html}>
+  <a class="title" href="{esc(item['link'])}" rel="noopener noreferrer">{esc(item['title'])}</a>
+  <div class="muted">{esc(item['source'])} · {esc(type_label)} · {esc(fmt_time(item['published'], tz))}</div>
+  <div class="badges">{badges}</div>
+</li>"""
+
+
+def render_listing(cfg: dict, heading: str, subtitle: str, items: list[dict], kev: list[dict],
+                   health: list[dict], tz: ZoneInfo) -> str:
     kev_days = cfg.get("kev_days", 7)
-    day_label = date.fromisoformat(day["date"]).strftime("%A, %B %d, %Y").replace(" 0", " ")
+    research = [i for i in items if i.get("type") == "research"]
+    headlines = [i for i in items if i.get("type") != "research"]
+    watch_count = sum(bool(i.get("watch")) for i in items) + sum(bool(v.get("watch")) for v in kev)
 
-    parts = [f'<h1>{esc(day_label)}</h1>']
-    if day.get("generated_at"):
-        parts.append(f'<p class="muted">Last updated {esc(fmt_time(day["generated_at"], tz))} · collected automatically</p>')
-
+    parts = [f"<h1>{esc(heading)}</h1>"]
+    if subtitle:
+        parts.append(f'<p class="muted">{esc(subtitle)} <span id="new-since"></span></p>')
     parts.append(f"""<section class="stats">
-  <div class="stat"><span>New items</span><strong>{len(items)}</strong></div>
+  <div class="stat"><span>Headlines</span><strong>{len(headlines)}</strong></div>
+  <div class="stat"><span>Research reports</span><strong>{len(research)}</strong></div>
   <div class="stat"><span>KEV added (last {kev_days} days)</span><strong class="danger">{len(kev)}</strong></div>
   <div class="stat"><span>Watchlist hits</span><strong class="warning">{watch_count}</strong></div>
 </section>""")
 
     # Actively exploited vulnerabilities
-    parts.append(f'<h2>Actively exploited (CISA KEV, last {kev_days} days)</h2>')
+    parts.append(f"<h2>Actively exploited (CISA KEV, last {kev_days} days)</h2>")
     if kev:
         rows = []
         for v in kev:
@@ -323,40 +457,34 @@ def render_day(cfg: dict, day: dict, tz: ZoneInfo) -> str:
             if v["ransomware"]:
                 flags += badge("used in ransomware", "danger")
             nvd = f"https://nvd.nist.gov/vuln/detail/{v['cve']}"
-            rows.append(f"""<li class="card">
+            search = f"{v['cve']} {v['vendor']} {v['product']} {v['name']}".lower()
+            rows.append(f"""<li class="card kev" data-watch="{'1' if v['watch'] else '0'}" data-search="{esc(search)}">
   <div class="row"><a class="mono" href="{esc(nvd)}" rel="noopener noreferrer">{esc(v['cve'])}</a>
   <span class="muted">added {esc(v['added'])} · fix by {esc(v['due'])}</span></div>
   <div class="title">{esc(v['name'] or f"{v['vendor']} {v['product']}")}</div>
   <p class="muted">{esc(v['description'])}</p>
   <div class="badges">{flags}</div>
 </li>""")
-        parts.append(f'<ul class="list">{"".join(rows)}</ul>')
+        parts.append(f'<ul class="list" id="kev-list">{"".join(rows)}</ul>')
+        parts.append('<p class="muted empty-msg" data-for="kev-list" hidden>No KEV entries match your search or watchlist filter.</p>')
     else:
         parts.append('<p class="muted">No new KEV entries in this period.</p>')
 
-    # Headlines: watchlist hits first, then newest first
-    parts.append("<h2>Headlines</h2>")
-    if items:
-        all_tags = sorted({t for i in items for t in i["tags"]})
-        buttons = "".join(f'<button type="button" data-tag="{esc(t)}">{esc(t)}</button>' for t in all_tags)
-        parts.append(f'<div class="filters" aria-label="Filter by tag"><button type="button" data-tag="" class="active">all</button>{buttons}</div>')
-        rows = []
-        ordered = sorted(items, key=lambda i: i["published"], reverse=True)
-        ordered.sort(key=lambda i: not i["watch"])  # stable sort keeps newest-first within groups
-        for i in ordered:
-            badges = "".join(badge(t) for t in i["tags"]) + "".join(badge(w, "watch") for w in i["watch"])
-            rows.append(f"""<li class="card" data-tags="{esc('|'.join(i['tags']))}">
-  <a class="title" href="{esc(i['link'])}" rel="noopener noreferrer">{esc(i['title'])}</a>
-  <div class="muted">{esc(i['source'])} · {esc(fmt_time(i['published'], tz))}</div>
-  <div class="badges">{badges}</div>
-</li>""")
-        parts.append(f'<ul class="list" id="headlines">{"".join(rows)}</ul>')
-    else:
-        parts.append('<p class="muted">No new headlines in this run.</p>')
+    parts.append(render_filters(cfg, items))
+
+    for list_id, title, group in (("headlines", "Headlines", headlines), ("research", "Threat research", research)):
+        parts.append(f"<h2>{title}</h2>")
+        if group:
+            ordered = sorted(group, key=lambda i: i["published"], reverse=True)
+            ordered.sort(key=lambda i: not i.get("watch"))  # watchlist hits first, newest first within groups
+            parts.append(f'<ul class="list" id="{list_id}">{"".join(render_item(i, tz) for i in ordered)}</ul>')
+            parts.append(f'<p class="muted empty-msg" data-for="{list_id}" hidden>No items match these filters.</p>')
+        else:
+            parts.append(f'<p class="muted">No {title.lower()} in this period.</p>')
 
     # Source health: shows which feeds worked, like a small monitoring panel
     rows = []
-    for h in day.get("health", []):
+    for h in health:
         state = badge("ok", "ok") if h["status"] == "ok" else badge("error", "danger")
         detail = f'{h["items"]} items' if h["status"] == "ok" else esc(h.get("error", ""))
         rows.append(f"<tr><td>{esc(h['name'])}</td><td>{state}</td><td class=\"muted\">{detail}</td></tr>")
@@ -387,7 +515,11 @@ def load_posts() -> list[dict]:
 
 def build_site(cfg: dict) -> None:
     tz = ZoneInfo(cfg["site"].get("timezone", "UTC"))
+    tagger, types = Tagger(cfg), feed_types(cfg)
+    profiles = load_profiles(cfg)
     days = [load_json(p, {}) for p in sorted(DAILY.glob("*.json"), reverse=True)]
+    for day in days:
+        day["items"] = [enrich(i, tagger, types) for i in day.get("items", [])]
     posts = load_posts()
     (DOCS / "archive").mkdir(parents=True, exist_ok=True)
     (DOCS / "weekly").mkdir(parents=True, exist_ok=True)
@@ -395,6 +527,12 @@ def build_site(cfg: dict) -> None:
 
     def write(rel: str, content: str) -> None:
         (DOCS / rel).write_text(content, encoding="utf-8")
+
+    def day_heading(day: dict) -> str:
+        return date.fromisoformat(day["date"]).strftime("%A, %B %d, %Y").replace(" 0", " ")
+
+    def updated(day: dict) -> str:
+        return f"Last updated {fmt_time(day['generated_at'], tz)} · collected automatically" if day.get("generated_at") else ""
 
     # Home page: latest weekly post + today's digest
     latest_post = ""
@@ -404,15 +542,32 @@ def build_site(cfg: dict) -> None:
   <span class="muted">Latest weekly analysis · {esc(p['date'])}</span>
   <strong>{esc(p['title'])}</strong>
 </a>"""
-    home = render_day(cfg, days[0], tz) if days else "<h1>No data yet</h1><p>Run the workflow once to collect the first digest.</p>"
-    write("index.html", page(cfg, "Today", latest_post + home))
+    if days:
+        d = days[0]
+        home = render_listing(cfg, day_heading(d), updated(d), d["items"], d.get("kev", []), d.get("health", []), tz)
+    else:
+        home = "<h1>No data yet</h1><p>Run the workflow once to collect the first digest.</p>"
+    write("index.html", page(cfg, "Today", latest_post + home, profiles=profiles))
+
+    # Last N days in one list (handy with profiles)
+    recent_n = cfg.get("recent_days", 7)
+    recent = days[:recent_n]
+    if recent:
+        items = [i for d in recent for i in d["items"]]
+        span = f"{recent[-1]['date']} to {recent[0]['date']}"
+        body = render_listing(cfg, f"Last {recent_n} days", f"{span} · {updated(recent[0])}", items,
+                              recent[0].get("kev", []), recent[0].get("health", []), tz)
+    else:
+        body = "<h1>No data yet</h1>"
+    write("recent.html", page(cfg, f"Last {recent_n} days", body, profiles=profiles))
 
     # Archive: one page per day
     links = []
     for day in days:
-        write(f"archive/{day['date']}.html", page(cfg, day["date"], render_day(cfg, day, tz), depth=1))
+        body = render_listing(cfg, day_heading(day), updated(day), day["items"], day.get("kev", []), day.get("health", []), tz)
+        write(f"archive/{day['date']}.html", page(cfg, day["date"], body, depth=1, profiles=profiles))
         links.append(f'<li><a href="{esc(day["date"])}.html">{esc(day["date"])}</a> '
-                     f'<span class="muted">{len(day.get("items", []))} items · {len(day.get("kev", []))} KEV</span></li>')
+                     f'<span class="muted">{len(day["items"])} items · {len(day.get("kev", []))} KEV</span></li>')
     write("archive/index.html", page(cfg, "Archive", f'<h1>Archive</h1><ul class="plain">{"".join(links)}</ul>', depth=1))
 
     # Weekly analysis posts
@@ -425,13 +580,24 @@ def build_site(cfg: dict) -> None:
     write("weekly/index.html", page(cfg, "Weekly analysis", weekly, depth=1))
 
     # About page
-    sources = "".join(f'<li>{esc(f["name"])}</li>' for f in cfg.get("feeds", []))
+    by_type = {}
+    for f in cfg.get("feeds", []):
+        by_type.setdefault(SOURCE_TYPES.get(f.get("type", "news"), "News"), []).append(f["name"])
+    sources = "".join(f'<h3>{esc(t)}</h3><ul class="plain">{"".join(f"<li>{esc(n)}</li>" for n in names)}</ul>'
+                      for t, names in by_type.items())
+    preset_list = "".join(f"<li>{esc(p['name'])}</li>" for p in profiles)
     about = f"""<h1>About</h1>
 <p>{esc(cfg['site'].get('description', ''))}</p>
 <p>Every morning a scheduled GitHub Actions job collects the sources below, removes duplicates,
-tags items by topic, highlights technology on my watchlist and rebuilds this site.
+tags items by topic, sector and regulation, highlights technology on my watchlist and rebuilds this site.
 Weekly analysis posts are written by me.</p>
-<h2>Sources</h2><ul class="plain">{sources}<li>CISA Known Exploited Vulnerabilities catalog</li></ul>"""
+<h2>Filters and profiles</h2>
+<p>Use the filter panel to narrow the list by topic, sector, regulation or source type. Profiles are saved filter sets,
+for example for a specific job or industry. Preset profiles:</p>
+<ul class="plain">{preset_list}</ul>
+<p>You can save your own profiles; they are stored in your browser only.
+Sector and regulation tags come from keyword matching and are hints, not a compliance assessment.</p>
+<h2>Sources</h2>{sources}<h3>Vulnerability data</h3><ul class="plain"><li>CISA Known Exploited Vulnerabilities catalog</li></ul>"""
     write("about.html", page(cfg, "About", about))
 
 

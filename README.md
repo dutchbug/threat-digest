@@ -1,8 +1,8 @@
 # Threat digest
 
-An automated threat intelligence digest. Every morning it collects security news, security advisories, and newly added **actively exploited vulnerabilities** (CISA KEV). It removes duplicates, tags items by topic, highlights technology on my watchlist, and publishes a static website. Every week I add my own analysis of the most important stories.
+An automated threat intelligence digest. Every morning it collects security news, vendor threat research, government advisories, and newly added **actively exploited vulnerabilities** (CISA KEV) from 18 sources. It removes duplicates, tags items by topic, sector and regulation, highlights technology on my watchlist, and publishes a static website with filters and saved **profiles** (for example *Healthcare / HIPAA* or *SOC analyst*). Every week I add my own analysis of the most important stories.
 
-**Live site:** `https://dutchbug.github.io/threat-digest/` *(update after enabling GitHub Pages)*
+**Live site:** https://dutchbug.github.io/threat-digest/
 
 ## Why I built this
 
@@ -21,14 +21,27 @@ flowchart LR
     C --> D[data/daily/*.json<br>history]
     D --> E[Static site<br>docs/]
     P[posts/*.md<br>my weekly analysis] --> E
-    E --> F[GitHub Pages]
+    E --> F[deploy job<br>GitHub Pages]
 ```
 
 1. **Collect:** a scheduled GitHub Actions job runs `digest.py`, which downloads the RSS feeds and the CISA Known Exploited Vulnerabilities catalog.
-2. **Process:** items older than the lookback window are skipped. Duplicates are removed: the same link with different tracking parameters counts as one item, and items published on earlier days are not shown again. Each item is tagged by keyword (ransomware, phishing, cloud/M365…) and checked against my watchlist.
+2. **Process:** items older than the lookback window are skipped. Duplicates are removed: the same link with different tracking parameters counts as one item, and items published on earlier days are not shown again. Each item is tagged by keyword in three groups (**topics** such as ransomware or phishing, **sectors** such as healthcare or finance, and **regulations** such as HIPAA or PCI DSS), gets its source type (news, threat research, government, analysis), and is checked against my watchlist.
 3. **Store:** results are saved as JSON per day in `data/daily/`, so the history is versioned in Git.
-4. **Publish:** the script generates the site in `docs/`, which GitHub Pages serves. Pages: today, archive, weekly analysis, about.
+4. **Publish:** the script generates the site in `docs/`, and the deploy job publishes it to GitHub Pages. Pages: today, last 7 days, archive, weekly analysis, about.
 5. **Monitor:** each page shows a *Source status* panel listing which feeds worked. One broken feed doesn't stop the run.
+
+## Filters and profiles
+
+The filter panel narrows the list by topic, sector, regulation and source type, with a search box and a *watchlist only* switch.
+
+- **Match any filter:** shows items that match any selected filter, for example *healthcare OR HIPAA*.
+- **Match every group:** an item must match each group you used, for example *ransomware AND healthcare*.
+- **Preset profiles** are defined in `config.yaml` (Healthcare / HIPAA, Payments / PCI DSS, GRC and compliance, SOC analyst, Microsoft 365 admin, Vulnerability management, Public sector and education, Threat research only).
+- **My profiles:** select filters, name them, and save. They're stored in the browser (localStorage), so no account or backend is needed. The last used profile is re-applied on the next visit.
+- **Shareable links:** the current filters are kept in the URL, so *Copy link* opens the same view on another device.
+- **New since last visit:** items published since your previous visit get a *new* badge.
+
+Sector and regulation tags come from keyword matching. They're hints for triage, not a compliance assessment.
 
 ## Security considerations
 
@@ -36,12 +49,15 @@ This project processes content from the internet, so I treated all of it as untr
 
 - **Output encoding:** every value from a feed is HTML-escaped before it is placed in a page, to prevent cross-site scripting (XSS).
 - **Link validation:** only `http`/`https` links are allowed, so a malicious feed can't inject `javascript:` links. CVE IDs are validated with a regex before they're used to build URLs.
-- **Content Security Policy:** pages only load scripts and styles from the site itself.
-- **Least privilege:** the workflow token only has `contents: write`, and the job has a timeout.
+- **Content Security Policy:** pages only load scripts and styles from the site itself; there are no inline scripts.
+- **Safe embedding:** profile data is embedded as JSON with `<`, `>` and `&` escaped, so it can't break out of its script element.
+- **Untrusted URL state:** filters read from a shared link are validated (only known fields, strings only, length-limited) and only used for comparisons, never inserted as HTML.
+- **Privacy:** saved profiles and the last-visit time stay in the visitor's browser. The site has no tracking, cookies or backend.
+- **Least privilege:** the workflow is read-only by default. The build job only gets `contents: write` (to commit data) and the deploy job only gets `pages: write` + `id-token: write`. Both jobs have timeouts.
 - **No secrets:** version 1 needs no API keys. Any future keys go in GitHub Secrets, never in the code.
 - **Copyright:** the site shows headlines and links to the original articles, not article text. Analysis is written in my own words.
 
-Tests in `tests/fixtures/` include a malicious title, a `javascript:` link and a malformed CVE ID to check these protections.
+Tests in `tests/fixtures/` include a malicious title, a `javascript:` link and a malformed CVE ID to check these protections, plus items for the sector/regulation tagging (and a check that generic words like "teams" don't get a Microsoft 365 tag).
 
 ## Project structure
 
@@ -52,6 +68,8 @@ posts/                        weekly analysis (Markdown); _template.md is the te
 data/daily/YYYY-MM-DD.json    collected data per day
 data/seen.json                published item IDs (dedupe, kept 30 days)
 docs/                         generated website (GitHub Pages)
+docs/app.js                   filters, profiles, shareable links, "new" badges
+docs/style.css                styling (light and dark mode)
 tests/fixtures/               fictional sample data for offline testing
 .github/workflows/digest.yml  daily schedule
 ```
@@ -60,8 +78,8 @@ tests/fixtures/               fictional sample data for offline testing
 
 1. Create a **public** repository named `threat-digest` and upload these files, including the hidden `.github` folder.
 2. **Settings → Actions → General → Workflow permissions:** select *Read and write permissions*. This lets the job commit the digest.
-3. **Actions tab:** open *Daily threat digest* and click **Run workflow** to create the first digest.
-4. **Settings → Pages:** Source *Deploy from a branch*, Branch `main`, folder `/docs`. After a minute the site is live at `https://<username>.github.io/threat-digest/`.
+3. **Settings → Pages:** set Source to **GitHub Actions**.
+4. **Actions tab:** open *Daily threat digest* and click **Run workflow**. The `build` job collects the data and commits it; the `deploy` job publishes the site at `https://<username>.github.io/threat-digest/`.
 
 After that, it runs every morning by itself.
 
@@ -92,13 +110,20 @@ Open `docs/index.html` in a browser to see the result.
 ## Customizing
 
 Edit `config.yaml`:
-- **feeds:** add or remove RSS/Atom sources.
-- **tags:** topic keywords (whole-word, case-insensitive).
+- **feeds:** add or remove RSS/Atom sources, each with a `type` (news, research, government, analysis).
+- **tags / sectors / regulations:** keywords per filter (whole-word, case-insensitive).
+- **profiles:** preset filter sets shown in the Profile menu. Unknown names produce a warning in the run log.
 - **watchlist:** technology to highlight.
 - **lookback_hours / kev_days:** time windows.
 
+## Changelog
+
+- **v1.1:** 18 sources with source types and a separate threat research section; sector and regulation tagging; filter panel with preset and custom profiles, shareable links and search; *Last 7 days* page; *new since last visit* badges; deployment through the workflow's own deploy job (least privilege per job). Removed CISA advisories (blocks automated requests from cloud servers; KEV data is still used) and the MSRC blog (invalid XML feed), both found through the Source status panel.
+- **v1.0:** daily collection, KEV, tagging, watchlist, static site, weekly posts.
+
 ## Roadmap
 
+- [ ] Group the same story from several outlets ("covered by 5 sources")
 - [ ] Alerts (email or Discord) when a watchlist item appears in KEV
 - [ ] Trend page: KEV additions per month, top vendors, tag counts
 - [ ] MITRE ATT&CK technique tagging
@@ -107,4 +132,4 @@ Edit `config.yaml`:
 
 ## Sources
 
-CISA Known Exploited Vulnerabilities catalog, CISA advisories, Microsoft Security Response Center, Microsoft Security blog, BleepingComputer, The Hacker News, Krebs on Security, SANS Internet Storm Center. All content belongs to its respective publishers; this site only links to it.
+See `config.yaml` or the About page for the full list. All content belongs to its respective publishers; this site only links to it.

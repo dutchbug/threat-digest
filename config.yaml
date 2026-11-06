@@ -1,10 +1,10 @@
 # Threat digest configuration
-# Edit this file to change sources, tags and your watchlist.
+# Edit this file to change sources, tags, profiles and your watchlist.
 
 site:
   title: Threat digest
   author: Shanna Staartjes
-  description: Daily security news and actively exploited vulnerabilities, collected automatically. Weekly analysis written by me.
+  description: Daily security news, threat research and actively exploited vulnerabilities, collected automatically. Weekly analysis written by me.
   timezone: America/New_York
 
 # Only keep feed items published in the last N hours (the job runs daily).
@@ -13,52 +13,125 @@ lookback_hours: 48
 # Show CISA KEV entries added in the last N days.
 kev_days: 7
 
-# RSS/Atom feeds. "id" must be unique and use only letters, numbers and dashes.
-# If a feed URL stops working, the run continues and the failure shows on the site.
-feeds:
-  - id: cisa-advisories
-    name: CISA advisories
-    url: https://www.cisa.gov/cybersecurity-advisories/all.xml
-  - id: msrc
-    name: Microsoft Security Response Center
-    url: https://msrc.microsoft.com/blog/feed
-  - id: microsoft-security-blog
-    name: Microsoft Security blog
-    url: https://www.microsoft.com/en-us/security/blog/feed/
-  - id: bleepingcomputer
-    name: BleepingComputer
-    url: https://www.bleepingcomputer.com/feed/
-  - id: the-hacker-news
-    name: The Hacker News
-    url: https://feeds.feedburner.com/TheHackersNews
-  - id: krebs
-    name: Krebs on Security
-    url: https://krebsonsecurity.com/feed/
-  - id: sans-isc
-    name: SANS Internet Storm Center
-    url: https://isc.sans.edu/rssfeed.xml
+# Days included on the "Last 7 days" page.
+recent_days: 7
 
-# Tags are added when any keyword appears in an item's title or summary (case-insensitive).
+# RSS/Atom feeds.
+#   id:   unique, letters/numbers/dashes only
+#   type: news | research | government | analysis
+# If a feed stops working, the run continues and the failure shows under "Source status".
+feeds:
+  # --- News ---
+  - {id: bleepingcomputer, name: BleepingComputer, type: news, url: "https://www.bleepingcomputer.com/feed/"}
+  - {id: the-hacker-news, name: The Hacker News, type: news, url: "https://feeds.feedburner.com/TheHackersNews"}
+  - {id: the-record, name: The Record, type: news, url: "https://therecord.media/feed"}
+  - {id: securityweek, name: SecurityWeek, type: news, url: "https://www.securityweek.com/feed/"}
+  - {id: dark-reading, name: Dark Reading, type: news, url: "https://www.darkreading.com/rss.xml"}
+  - {id: krebs, name: Krebs on Security, type: news, url: "https://krebsonsecurity.com/feed/"}
+  - {id: ars-security, name: Ars Technica Security, type: news, url: "https://arstechnica.com/security/feed/"}
+  - {id: hipaa-journal, name: The HIPAA Journal, type: news, url: "https://www.hipaajournal.com/feed/"}
+  # --- Threat research (vendors) ---
+  - {id: microsoft-security-blog, name: Microsoft Security blog, type: research, url: "https://www.microsoft.com/en-us/security/blog/feed/"}
+  - {id: talos, name: Cisco Talos, type: research, url: "https://blog.talosintelligence.com/rss/"}
+  - {id: unit42, name: Palo Alto Unit 42, type: research, url: "https://unit42.paloaltonetworks.com/feed/"}
+  - {id: checkpoint-research, name: Check Point Research, type: research, url: "https://research.checkpoint.com/category/threat-research/feed/"}
+  - {id: sophos, name: Sophos News, type: research, url: "https://news.sophos.com/en-us/feed/"}
+  - {id: securelist, name: Kaspersky Securelist, type: research, url: "https://securelist.com/feed/"}
+  - {id: welivesecurity, name: ESET WeLiveSecurity, type: research, url: "https://feeds.feedburner.com/eset/blog"}
+  - {id: sans-isc, name: SANS Internet Storm Center, type: research, url: "https://isc.sans.edu/rssfeed.xml"}
+  # --- Government ---
+  - {id: ncsc-uk, name: UK NCSC, type: government, url: "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml"}
+  # --- Analysis and opinion ---
+  - {id: schneier, name: Schneier on Security, type: analysis, url: "https://www.schneier.com/feed/atom/"}
+
+# Removed on 2026-11-06:
+#   CISA advisories (403: blocks automated requests from cloud servers; KEV is still used)
+#   Microsoft Security Response Center blog (feed is not valid XML)
+
+# ---------------------------------------------------------------------------
+# Tagging. Keywords match whole words in an item's title and summary (case-insensitive).
+# Tags are keyword-based hints, not a compliance assessment.
+
+# Topics: what the item is about
 tags:
   ransomware: [ransomware, extortion, lockbit, akira, encryptor]
-  phishing: [phishing, phish, smishing, vishing, credential harvesting, fake login]
-  cloud/M365: [microsoft 365, m365, office 365, entra, azure, sharepoint, exchange online, onedrive, outlook, teams]
+  phishing: [phishing, phish, smishing, vishing, credential harvesting, fake login, business email compromise, bec]
+  cloud/M365: [microsoft 365, m365, office 365, entra, azure, sharepoint, exchange online, onedrive, microsoft outlook, microsoft teams, aws, google cloud]
   vulnerability: [cve-, vulnerability, vulnerabilities, zero-day, 0-day, exploit, exploited, patch, patches, flaw]
   data breach: [breach, data leak, leaked, exposed data, stolen data]
-  malware: [malware, trojan, infostealer, stealer, botnet, backdoor, loader, rat]
-  identity: [mfa, password, credentials, session token, oauth, sso, account takeover]
-  AI: [llm, prompt injection, ai agent, ai model, chatgpt, copilot, deepfake]
+  malware: [malware, trojan, infostealer, stealer, botnet, backdoor, loader, rat, spyware]
+  identity: [mfa, password, passwords, credentials, session token, oauth, sso, account takeover]
+  AI: [llm, prompt injection, ai agent, ai model, chatgpt, copilot, deepfake, generative ai]
+  nation-state: [nation-state, state-sponsored, apt, espionage]
+
+# Sectors: who is affected
+sectors:
+  healthcare: [healthcare, health care, hospital, hospitals, health system, patient, patients, medical, clinic, pharmacy, pharmaceutical, ehr, health plan]
+  finance: [bank, banks, banking, financial, credit union, fintech, insurance, insurer, brokerage, cryptocurrency exchange]
+  retail/e-commerce: [retail, retailer, e-commerce, ecommerce, online store, magecart, card skimmer, skimming, point-of-sale, pos malware]
+  education: [university, universities, school, schools, school district, college, student, students, k-12]
+  government: [government, federal agency, agencies, municipal, city of, county, ministry, public sector]
+  critical infrastructure: [critical infrastructure, energy, utility, utilities, water, power grid, ics, scada, operational technology, oil and gas]
+  manufacturing: [manufacturing, manufacturer, factory, industrial]
+
+# Regulations and standards mentioned
+regulations:
+  HIPAA: [hipaa, hhs ocr, office for civil rights, protected health information, ephi, hitech]
+  PCI DSS: [pci dss, pci-dss, pci compliance, payment card industry, cardholder data]
+  GDPR: [gdpr, general data protection regulation, data protection authority]
+  SEC disclosure: [securities and exchange commission, 8-k, form 8-k, material cybersecurity incident]
+  NIST / CMMC / FedRAMP: [nist, cmmc, fedramp, 800-171, 800-53, cybersecurity framework]
+  ISO 27001 / SOC 2: [iso 27001, iso/iec 27001, soc 2, soc2]
+  NIS2 / DORA: [nis2, nis 2, dora, digital operational resilience act]
+  privacy laws (US): [ccpa, cpra, state privacy law, ftc, attorney general]
+  breach notification: [breach notification, notification letters, notified regulators, notifying affected]
 
 # Watchlist: technology you care about. Matches are highlighted and counted.
 watchlist:
   - microsoft 365
   - windows
-  - exchange
+  - exchange server
+  - exchange online
   - entra
   - chrome
-  - edge
+  - microsoft edge
   - fortinet
   - cisco
   - palo alto
   - vpn
   - power platform
+
+# ---------------------------------------------------------------------------
+# Preset filter profiles (shown in the Profile menu on the site).
+# Each profile selects topics, sectors, regulations and/or source types.
+#   match: any  -> item matches ANY selected filter
+#   match: all  -> item must match at least one selected filter in EVERY group used
+# Visitors can also save their own profiles in their browser.
+profiles:
+  - name: Healthcare / HIPAA
+    match: any
+    sectors: [healthcare]
+    regulations: [HIPAA]
+  - name: Payments / PCI DSS
+    match: any
+    sectors: [finance, retail/e-commerce]
+    regulations: [PCI DSS]
+  - name: GRC and compliance
+    match: any
+    regulations: [HIPAA, PCI DSS, GDPR, SEC disclosure, NIST / CMMC / FedRAMP, ISO 27001 / SOC 2, NIS2 / DORA, privacy laws (US), breach notification]
+  - name: SOC analyst
+    match: any
+    topics: [malware, phishing, ransomware, identity]
+  - name: Microsoft 365 admin
+    match: any
+    topics: [cloud/M365, identity]
+  - name: Vulnerability management
+    match: any
+    topics: [vulnerability]
+  - name: Public sector and education
+    match: any
+    sectors: [government, education]
+    regulations: [NIST / CMMC / FedRAMP]
+  - name: Threat research only
+    match: any
+    types: [research]
