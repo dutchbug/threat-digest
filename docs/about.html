@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Daily security news and actively exploited vulnerabilities, collected automatically. Weekly analysis written by me.">
+<meta name="description" content="Daily security news, threat research and actively exploited vulnerabilities, collected automatically. Weekly analysis written by me.">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:">
 <meta name="referrer" content="no-referrer">
 <title>About · Threat digest</title>
@@ -14,6 +14,7 @@
   <a class="brand" href="index.html">Threat digest</a>
   <nav>
     <a href="index.html">Today</a>
+    <a href="recent.html">Last 7 days</a>
     <a href="archive/index.html">Archive</a>
     <a href="weekly/index.html">Weekly analysis</a>
     <a href="about.html">About</a>
@@ -21,16 +22,22 @@
 </header>
 <main>
 <h1>About</h1>
-<p>Daily security news and actively exploited vulnerabilities, collected automatically. Weekly analysis written by me.</p>
+<p>Daily security news, threat research and actively exploited vulnerabilities, collected automatically. Weekly analysis written by me.</p>
 <p>Every morning a scheduled GitHub Actions job collects the sources below, removes duplicates,
-tags items by topic, highlights technology on my watchlist and rebuilds this site.
+tags items by topic, sector and regulation, highlights technology on my watchlist and rebuilds this site.
 Weekly analysis posts are written by me.</p>
-<h2>Sources</h2><ul class="plain"><li>CISA advisories</li><li>Microsoft Security Response Center</li><li>Microsoft Security blog</li><li>BleepingComputer</li><li>The Hacker News</li><li>Krebs on Security</li><li>SANS Internet Storm Center</li><li>CISA Known Exploited Vulnerabilities catalog</li></ul>
+<h2>Filters and profiles</h2>
+<p>Use the filter panel to narrow the list by topic, sector, regulation or source type. Profiles are saved filter sets,
+for example for a specific job or industry. Preset profiles:</p>
+<ul class="plain"><li>Healthcare / HIPAA</li><li>Payments / PCI DSS</li><li>GRC and compliance</li><li>SOC analyst</li><li>Microsoft 365 admin</li><li>Vulnerability management</li><li>Public sector and education</li><li>Threat research only</li></ul>
+<p>You can save your own profiles; they are stored in your browser only.
+Sector and regulation tags come from keyword matching and are hints, not a compliance assessment.</p>
+<h2>Sources</h2><h3>News</h3><ul class="plain"><li>BleepingComputer</li><li>The Hacker News</li><li>The Record</li><li>SecurityWeek</li><li>Dark Reading</li><li>Krebs on Security</li><li>Ars Technica Security</li><li>The HIPAA Journal</li></ul><h3>Threat research</h3><ul class="plain"><li>Microsoft Security blog</li><li>Cisco Talos</li><li>Palo Alto Unit 42</li><li>Check Point Research</li><li>Sophos News</li><li>Kaspersky Securelist</li><li>ESET WeLiveSecurity</li><li>SANS Internet Storm Center</li></ul><h3>Government</h3><ul class="plain"><li>UK NCSC</li></ul><h3>Analysis</h3><ul class="plain"><li>Schneier on Security</li></ul><h3>Vulnerability data</h3><ul class="plain"><li>CISA Known Exploited Vulnerabilities catalog</li></ul>
 </main>
 <footer>
   <p>Built by Shanna Staartjes. Headlines link to the original sources; summaries are not republished.
-  Vulnerability data: CISA Known Exploited Vulnerabilities catalog.</p>
+  Vulnerability data: CISA Known Exploited Vulnerabilities catalog. Sector and regulation tags are keyword-based hints, not compliance advice.</p>
 </footer>
-<script src="filter.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

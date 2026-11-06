@@ -2,6 +2,537 @@
   "date": "2026-11-06",
   "items": [
     {
+      "id": "f2bfb34b69dd25d9",
+      "title": "Fake security tools on GitHub push backdoors and infostealers",
+      "link": "https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/",
+      "source": "BleepingComputer",
+      "type": "news",
+      "published": "2026-11-06T18:46:52+00:00",
+      "tags": [
+        "malware"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "0a08ab953574407a",
+      "title": "Japan Announces Emergency Cybersecurity Package Following a Wave of Attacks",
+      "link": "https://www.securityweek.com/japan-announces-emergency-cybersecurity-package-following-a-wave-of-attacks/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-06T18:28:41+00:00",
+      "tags": [],
+      "sectors": [
+        "government"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "3c3dad9eec40e4f3",
+      "title": "AI Gave Your Incident Archive a Second Job",
+      "link": "https://www.darkreading.com/cyber-risk/ai-gave-your-incident-archive-second-job",
+      "source": "Dark Reading",
+      "type": "news",
+      "published": "2026-11-06T18:27:30+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "a30506e2a5ff44e9",
+      "title": "Security Incident at EHR Vendor Affects Patients of New York Counselling Practices",
+      "link": "https://www.hipaajournal.com/ehr-vendor-data-breach-new-york-counselling-practices/",
+      "source": "The HIPAA Journal",
+      "type": "news",
+      "published": "2026-11-06T17:42:37+00:00",
+      "tags": [],
+      "sectors": [
+        "healthcare"
+      ],
+      "regulations": [
+        "HIPAA"
+      ],
+      "watch": []
+    },
+    {
+      "id": "88525575b645fabc",
+      "title": "FBI agent pleads guilty to stealing $2.4 million in crypto from nation-state hackers",
+      "link": "https://therecord.media/fbi-agent-pleads-guilty-to-stealing-from-nation-state-hackers",
+      "source": "The Record",
+      "type": "news",
+      "published": "2026-11-06T16:53:00+00:00",
+      "tags": [
+        "nation-state"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "e443d9cdb6b79fa8",
+      "title": "Judge Approves $3.9M ArCare Data Breach Settlement",
+      "link": "https://www.hipaajournal.com/arcare-data-breach-settlement/",
+      "source": "The HIPAA Journal",
+      "type": "news",
+      "published": "2026-11-06T15:17:59+00:00",
+      "tags": [
+        "data breach"
+      ],
+      "sectors": [],
+      "regulations": [
+        "HIPAA"
+      ],
+      "watch": []
+    },
+    {
+      "id": "a5d2f46564bf550f",
+      "title": "Pinpointing Location of Videos from Background Airplane Sounds",
+      "link": "https://www.schneier.com/blog/archives/2026/11/pinpointing-location-of-videos-from-background-airplane-sounds.html",
+      "source": "Schneier on Security",
+      "type": "analysis",
+      "published": "2026-11-06T14:57:48+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "89d9d2f46b30284f",
+      "title": "Judge Certifies Classes in Meta Platforms Healthcare Data Privacy Litigation",
+      "link": "https://www.hipaajournal.com/judge-certifies-classes-meta-healthcare-data-privacy-litigation/",
+      "source": "The HIPAA Journal",
+      "type": "news",
+      "published": "2026-11-06T14:40:44+00:00",
+      "tags": [],
+      "sectors": [
+        "healthcare"
+      ],
+      "regulations": [
+        "HIPAA"
+      ],
+      "watch": []
+    },
+    {
+      "id": "1d243392c3350580",
+      "title": "In Other News: Trezor Implant, LLMJacking Bills Hit $1M, SAP Flaws Weaponized Within Days",
+      "link": "https://www.securityweek.com/in-other-news-trezor-implant-llmjacking-bills-hit-1m-sap-flaws-weaponized-within-days/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-06T14:40:09+00:00",
+      "tags": [
+        "ransomware",
+        "data breach"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "e34ca10a5a26ddf3",
+      "title": "CEO-spoofing scammers used AI to help steal more than $100 million, feds say",
+      "link": "https://therecord.media/ceo-spoofing-scammers-charged",
+      "source": "The Record",
+      "type": "news",
+      "published": "2026-11-06T14:30:00+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "5c3efaed0f43898e",
+      "title": "Critical Infrastructure Orgs Warned of Cyberattacks on Refrigeration and Cold Chain Monitoring Systems",
+      "link": "https://www.hipaajournal.com/critical-infrastructure-orgs-warned-of-cyberattacks-on-refrigeration-and-cold-chain-monitoring-systems/",
+      "source": "The HIPAA Journal",
+      "type": "news",
+      "published": "2026-11-06T14:27:57+00:00",
+      "tags": [],
+      "sectors": [
+        "critical infrastructure"
+      ],
+      "regulations": [
+        "HIPAA"
+      ],
+      "watch": []
+    },
+    {
+      "id": "fa3f0d293e67cff4",
+      "title": "DigiCert Data Breach Impacts Business Customer Information",
+      "link": "https://www.securityweek.com/digicert-data-breach-impacts-business-customer-information/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-06T14:00:07+00:00",
+      "tags": [
+        "data breach"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "5c794c08b581ac27",
+      "title": "Why Europe's Freezer Hacks Spread So Far, So Fast",
+      "link": "https://www.darkreading.com/ics-ot-security/europes-freezer-hacks-spread-so-far-so-fast",
+      "source": "Dark Reading",
+      "type": "news",
+      "published": "2026-11-06T14:00:00+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "c8d137c916001a92",
+      "title": "OpenAI Says New GPT-6 Cyber Model Hunts Flaws Without Crossing the Line",
+      "link": "https://www.securityweek.com/openai-says-new-gpt-6-cyber-model-hunts-flaws-without-crossing-the-line/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-06T13:19:52+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "fcfddf9c6246224f",
+      "title": "US Agencies Urge Organizations to Harden Refrigeration Controllers",
+      "link": "https://www.securityweek.com/us-agencies-urge-organizations-to-harden-refrigeration-controllers/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-06T13:02:26+00:00",
+      "tags": [],
+      "sectors": [
+        "finance",
+        "government"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "19e3f083200657e7",
+      "title": "Grocery Giant Ahold Delhaize Estimates Financial Toll of October Cyberattack",
+      "link": "https://www.securityweek.com/grocery-giant-ahold-delhaize-estimates-financial-toll-of-october-cyberattack/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-06T12:47:55+00:00",
+      "tags": [],
+      "sectors": [
+        "finance"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "f98f424c210d11ce",
+      "title": "Researchers Find Residential Proxies on White House Network",
+      "link": "https://www.securityweek.com/researchers-find-residential-proxies-on-white-house-network/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-06T12:16:13+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "e7267a328ffa57e4",
+      "title": "OpenSSH Rushes Patches for ‘SSHole’ Authentication Bypass",
+      "link": "https://www.securityweek.com/openssh-rushes-patches-for-sshole-authentication-bypass/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-06T12:07:42+00:00",
+      "tags": [
+        "vulnerability",
+        "identity"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "257d61dc9b9eff4e",
+      "title": "Virtualization security: attack layers and misconfiguration impact",
+      "link": "https://securelist.com/virtualization-security-esxi-and-proxmox-ransomware-cases/121819/",
+      "source": "Kaspersky Securelist",
+      "type": "research",
+      "published": "2026-11-06T10:00:12+00:00",
+      "tags": [
+        "ransomware"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "c4ac2da96f115022",
+      "title": "OpenAI Model Wrote Its Own Network Code to Get Around Sandbox Restrictions",
+      "link": "https://www.securityweek.com/openai-model-wrote-its-own-network-code-to-get-around-sandbox-restrictions/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-06T09:33:51+00:00",
+      "tags": [
+        "cloud/M365"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "67dcad13539027f3",
+      "title": "UK Warns Its Critical Infrastructure Faces Grave Risk",
+      "link": "https://www.darkreading.com/cybersecurity-operations/uk-warns-critical-infrastructure-grave-risk",
+      "source": "Dark Reading",
+      "type": "news",
+      "published": "2026-11-06T09:00:00+00:00",
+      "tags": [],
+      "sectors": [
+        "government",
+        "critical infrastructure",
+        "manufacturing"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "064a7dd9257ff4c4",
+      "title": "3 Charged in Scheme to Use AI to Impersonate CEOs and Attorneys to Steal $129 Million",
+      "link": "https://www.securityweek.com/3-charged-in-scheme-to-use-ai-to-impersonate-ceos-and-attorneys-to-steal-129-million/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-06T03:03:29+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "0da6cf00fb542a34",
+      "title": "EU accuses TikTok of trapping users in harmful ‘rabbit holes’",
+      "link": "https://therecord.media/eu-accuses-tiktok-of-rabbit-hole-DSA-violation",
+      "source": "The Record",
+      "type": "news",
+      "published": "2026-11-06T00:00:00+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "8424b8cbc8e88fa1",
+      "title": "Meet *sshole, the vulnerability that lets hackers SSH into Linux devices",
+      "link": "https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/",
+      "source": "Ars Technica Security",
+      "type": "news",
+      "published": "2026-11-05T23:09:36+00:00",
+      "tags": [
+        "vulnerability"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "3189ce2b4e22a207",
+      "title": "Queens Public Library says ransomware attack disrupted Wi-Fi, on-site computers",
+      "link": "https://therecord.media/queens-library-ransomware-causes-disruptions",
+      "source": "The Record",
+      "type": "news",
+      "published": "2026-11-05T22:08:00+00:00",
+      "tags": [
+        "ransomware"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "c5d8bcb2d0573a49",
+      "title": "US Government Email Systems Open to Abuse Thanks to Typos",
+      "link": "https://www.darkreading.com/cybersecurity-operations/us-government-email-systems-abuse-typos",
+      "source": "Dark Reading",
+      "type": "news",
+      "published": "2026-11-05T21:35:05+00:00",
+      "tags": [],
+      "sectors": [
+        "government"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "6ae54b5becb8074a",
+      "title": "What We Missed: Knicks Phishing Test Goes Out of Bounds",
+      "link": "https://www.darkreading.com/cyber-risk/what-we-missed-knicks-phishing-test-out-of-bounds",
+      "source": "Dark Reading",
+      "type": "news",
+      "published": "2026-11-05T21:00:47+00:00",
+      "tags": [
+        "phishing"
+      ],
+      "sectors": [
+        "government"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "835e42a20ded7d60",
+      "title": "Social media giants sue California to overturn law shielding kids 15 and under from compulsive use",
+      "link": "https://therecord.media/social-media-giants-sue-california-over-social-media-law",
+      "source": "The Record",
+      "type": "news",
+      "published": "2026-11-05T20:48:00+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "8c41ea53568673e3",
+      "title": "APT29's Watering Holes Target Thousands of Mobile Users",
+      "link": "https://www.darkreading.com/mobile-security/apt29-watering-holes-target-mobile-users",
+      "source": "Dark Reading",
+      "type": "news",
+      "published": "2026-11-05T20:05:39+00:00",
+      "tags": [
+        "nation-state"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "7cc7abc127313281",
+      "title": "Bring a tent, I've got the coffee: Lessons from it-sa",
+      "link": "https://blog.talosintelligence.com/bring-a-tent-ive-got-the-coffee-lessons-from-it-sa/",
+      "source": "Cisco Talos",
+      "type": "research",
+      "published": "2026-11-05T19:00:00+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "1c2aa2bfc16ba4fc",
+      "title": "Hacking on Autopilot: Inside ARTEX Cybercrime Campaigns",
+      "link": "https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/",
+      "source": "Check Point Research",
+      "type": "research",
+      "published": "2026-11-05T17:22:06+00:00",
+      "tags": [
+        "vulnerability"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "d5adbe76452f9759",
+      "title": "SecurityDataPipeline.com Launches as a New Educational Resource for the AI Era",
+      "link": "https://www.darkreading.com/cybersecurity-operations/securitydatapipeline-com-launches-as-a-new-educational-resource-for-the-ai-era",
+      "source": "Dark Reading",
+      "type": "news",
+      "published": "2026-11-05T16:48:36+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "77315118c3dbfb48",
+      "title": "Free Webinar: The Most Overlooked HIPAA Challenges of 2026",
+      "link": "https://www.hipaajournal.com/webinar-common-hipaa-challenges-practices-faced/",
+      "source": "The HIPAA Journal",
+      "type": "news",
+      "published": "2026-11-05T15:39:44+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [
+        "HIPAA"
+      ],
+      "watch": []
+    },
+    {
+      "id": "1e9f8c6cb4be4924",
+      "title": "ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration",
+      "link": "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/",
+      "source": "Check Point Research",
+      "type": "research",
+      "published": "2026-11-05T14:00:11+00:00",
+      "tags": [
+        "phishing",
+        "vulnerability",
+        "malware",
+        "AI"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "4d1b7b1e5df80598",
+      "title": "Vida Y Salud-Health Systems & Hampton Regional Medical Center Settle Data Breach Lawsuits",
+      "link": "https://www.hipaajournal.com/vida-y-salud-hampton-regional-medical-center-data-breach-settlements/",
+      "source": "The HIPAA Journal",
+      "type": "news",
+      "published": "2026-11-05T11:00:02+00:00",
+      "tags": [
+        "data breach"
+      ],
+      "sectors": [
+        "healthcare"
+      ],
+      "regulations": [
+        "HIPAA"
+      ],
+      "watch": []
+    },
+    {
+      "id": "1d16bad8322036dc",
+      "title": "The SOC Files 5: Ghost in the pipeline, or a fileless SharePoint breach by Storm-2603",
+      "link": "https://securelist.com/storm-2603-fileless-toolshell-attack/121467/",
+      "source": "Kaspersky Securelist",
+      "type": "research",
+      "published": "2026-11-05T10:00:11+00:00",
+      "tags": [
+        "cloud/M365",
+        "data breach"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "5f3050c22688f3fa",
+      "title": "Hackers exploited iOS and Android flaws to infect phones",
+      "link": "https://arstechnica.com/security/2026/11/hackers-exploited-ios-and-android-flaws-to-infect-phones/",
+      "source": "Ars Technica Security",
+      "type": "news",
+      "published": "2026-11-04T22:26:49+00:00",
+      "tags": [
+        "vulnerability"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "1b4641ca37283c44",
+      "title": "Critical Rails Bug Threatens to Derail Vulnerable Servers",
+      "link": "https://www.darkreading.com/application-security/critical-rails-bug-derail-vulnerable-servers",
+      "source": "Dark Reading",
+      "type": "news",
+      "published": "2026-11-04T21:48:18+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
       "id": "9f4a53a12c7a4a6c",
       "title": "QNAP says hackers breaching NAS devices in Plex2Shell attacks",
       "link": "https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/",
@@ -506,26 +1037,6 @@
       "catalog_version": "2026.11.04"
     },
     {
-      "id": "cisa-advisories",
-      "name": "CISA advisories",
-      "status": "error",
-      "items": 0,
-      "error": "403 Client Error: Forbidden for url: https://www.cisa.gov/cybersecurity-advisories/all.xml"
-    },
-    {
-      "id": "msrc",
-      "name": "Microsoft Security Response Center",
-      "status": "error",
-      "items": 0,
-      "error": "could not parse feed (<unknown>:125:158: not well-formed (invalid token))"
-    },
-    {
-      "id": "microsoft-security-blog",
-      "name": "Microsoft Security blog",
-      "status": "ok",
-      "items": 4
-    },
-    {
       "id": "bleepingcomputer",
       "name": "BleepingComputer",
       "status": "ok",
@@ -538,17 +1049,102 @@
       "items": 19
     },
     {
+      "id": "the-record",
+      "name": "The Record",
+      "status": "ok",
+      "items": 5
+    },
+    {
+      "id": "securityweek",
+      "name": "SecurityWeek",
+      "status": "ok",
+      "items": 10
+    },
+    {
+      "id": "dark-reading",
+      "name": "Dark Reading",
+      "status": "ok",
+      "items": 8
+    },
+    {
       "id": "krebs",
       "name": "Krebs on Security",
       "status": "ok",
       "items": 1
     },
     {
+      "id": "ars-security",
+      "name": "Ars Technica Security",
+      "status": "ok",
+      "items": 2
+    },
+    {
+      "id": "hipaa-journal",
+      "name": "The HIPAA Journal",
+      "status": "ok",
+      "items": 6
+    },
+    {
+      "id": "microsoft-security-blog",
+      "name": "Microsoft Security blog",
+      "status": "ok",
+      "items": 4
+    },
+    {
+      "id": "talos",
+      "name": "Cisco Talos",
+      "status": "ok",
+      "items": 1
+    },
+    {
+      "id": "unit42",
+      "name": "Palo Alto Unit 42",
+      "status": "ok",
+      "items": 0
+    },
+    {
+      "id": "checkpoint-research",
+      "name": "Check Point Research",
+      "status": "ok",
+      "items": 2
+    },
+    {
+      "id": "sophos",
+      "name": "Sophos News",
+      "status": "error",
+      "items": 0,
+      "error": "HTTPSConnectionPool(host='www.sophos.com', port=443): Read timed out. (read timeout=20)"
+    },
+    {
+      "id": "securelist",
+      "name": "Kaspersky Securelist",
+      "status": "ok",
+      "items": 2
+    },
+    {
+      "id": "welivesecurity",
+      "name": "ESET WeLiveSecurity",
+      "status": "ok",
+      "items": 0
+    },
+    {
       "id": "sans-isc",
       "name": "SANS Internet Storm Center",
       "status": "ok",
       "items": 3
+    },
+    {
+      "id": "ncsc-uk",
+      "name": "UK NCSC",
+      "status": "ok",
+      "items": 0
+    },
+    {
+      "id": "schneier",
+      "name": "Schneier on Security",
+      "status": "ok",
+      "items": 1
     }
   ],
-  "generated_at": "2026-11-06T18:44:36.480636+00:00"
+  "generated_at": "2026-11-06T18:47:35.584861+00:00"
 }
