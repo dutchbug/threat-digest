@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Daily security news, threat research and actively exploited vulnerabilities, collected automatically. Weekly analysis written by me.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:">
+<meta name="referrer" content="no-referrer">
+<title>2026-11-08 · Threat digest</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../index.html">Threat digest</a>
+  <nav>
+    <a href="../index.html">Today</a>
+    <a href="../recent.html">Last 7 days</a>
+    <a href="../archive/index.html">Archive</a>
+    <a href="../weekly/index.html">Weekly analysis</a>
+    <a href="../about.html">About</a>
+  </nav>
+</header>
+<main>
+<h1>Sunday, November 8, 2026</h1>
+<p class="muted">Last updated Nov 8, 12:01 PM · collected automatically <span id="new-since"></span></p>
+<section class="stats">
+  <div class="stat"><span>Stories</span><strong>2</strong><small>3 articles</small></div>
+  <div class="stat"><span>Research reports</span><strong>1</strong></div>
+  <div class="stat"><span>Newly exploited (KEV)</span><strong class="danger">3</strong><small>last 7 days</small></div>
+  <div class="stat"><span>Watchlist hits</span><strong class="warning">0</strong></div>
+</section>
+<h2>Actively exploited <span class="h-count">3</span></h2>
+<p class="muted">From the CISA Known Exploited Vulnerabilities catalog, added in the last 7 days.</p>
+<ul class="list" id="kev-list"><li class="card kev" data-watch="0" data-search="cve-2026-19868 sonicwall sonicos sslvpn sonicwall sonicos sslvpn use of single-factor authentication vulnerability">
+  <div class="row"><a class="mono" href="https://nvd.nist.gov/vuln/detail/CVE-2026-19868" rel="noopener noreferrer">CVE-2026-19868</a>
+  <span class="muted">added 2026-11-06 · fix by 2026-11-20</span></div>
+  <div class="title">SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability</div>
+  <p class="desc">SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).</p>
+  <div class="badges"></div>
+</li><li class="card kev" data-watch="0" data-search="cve-2024-27834 apple multiple products apple multiple products improper authentication vulnerability">
+  <div class="row"><a class="mono" href="https://nvd.nist.gov/vuln/detail/CVE-2024-27834" rel="noopener noreferrer">CVE-2024-27834</a>
+  <span class="muted">added 2026-11-04 · fix by 2026-11-18</span></div>
+  <div class="title">Apple Multiple Products Improper Authentication Vulnerability</div>
+  <p class="desc">Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.</p>
+  <div class="badges"></div>
+</li><li class="card kev" data-watch="0" data-search="cve-2026-119977 wordpress wordpress core wordpress wordpress core time-of-check time-of-use (toctou) race condition vulnerability">
+  <div class="row"><a class="mono" href="https://nvd.nist.gov/vuln/detail/CVE-2026-119977" rel="noopener noreferrer">CVE-2026-119977</a>
+  <span class="muted">added 2026-11-03 · fix by 2026-11-06</span></div>
+  <div class="title">WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability</div>
+  <p class="desc">WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessible staging paths used during full-package core upgrades.</p>
+  <div class="badges"></div>
+</li></ul>
+<section class="filter-panel" id="filters" hidden aria-label="Filters">
+  <div class="filter-row">
+    <label for="profile-select" class="group-label">Profile</label>
+    <select id="profile-select"></select>
+    <input type="search" id="filter-search" placeholder="Search, for example fortinet" aria-label="Search stories">
+  </div>
+  <div class="filter-row">
+    <label class="inline"><input type="checkbox" id="filter-watch"> Watchlist only</label>
+    <label class="inline"><input type="checkbox" id="compact-view"> Compact view</label>
+    <span class="spacer"></span>
+    <button type="button" id="copy-link">Copy link</button>
+    <button type="button" id="clear-filters">Clear filters</button>
+    <button type="button" id="profile-delete" hidden>Delete profile</button>
+  </div>
+  <details id="more-filters">
+    <summary>Topics, sectors, regulations and source types <span id="active-summary" class="muted"></span></summary>
+    <div class="filter-body">
+      <span class="inline match" role="radiogroup" aria-label="Match mode">Show stories that match
+        <label class="inline"><input type="radio" name="match" value="any" checked> any filter</label>
+        <label class="inline"><input type="radio" name="match" value="all"> every group</label>
+      </span>
+      <div class="chip-group"><span class="group-label">Topics</span><div class="chips"><button type="button" class="chip empty" data-group="topics" data-value="ransomware" aria-pressed="false">ransomware <span class="count">0</span></button><button type="button" class="chip empty" data-group="topics" data-value="phishing" aria-pressed="false">phishing <span class="count">0</span></button><button type="button" class="chip empty" data-group="topics" data-value="cloud/M365" aria-pressed="false">cloud/M365 <span class="count">0</span></button><button type="button" class="chip" data-group="topics" data-value="vulnerability" aria-pressed="false">vulnerability <span class="count">1</span></button><button type="button" class="chip" data-group="topics" data-value="data breach" aria-pressed="false">data breach <span class="count">1</span></button><button type="button" class="chip empty" data-group="topics" data-value="malware" aria-pressed="false">malware <span class="count">0</span></button><button type="button" class="chip" data-group="topics" data-value="identity" aria-pressed="false">identity <span class="count">1</span></button><button type="button" class="chip empty" data-group="topics" data-value="AI" aria-pressed="false">AI <span class="count">0</span></button><button type="button" class="chip empty" data-group="topics" data-value="nation-state" aria-pressed="false">nation-state <span class="count">0</span></button></div></div><div class="chip-group"><span class="group-label">Sectors</span><div class="chips"><button type="button" class="chip empty" data-group="sectors" data-value="healthcare" aria-pressed="false">healthcare <span class="count">0</span></button><button type="button" class="chip empty" data-group="sectors" data-value="finance" aria-pressed="false">finance <span class="count">0</span></button><button type="button" class="chip empty" data-group="sectors" data-value="retail/e-commerce" aria-pressed="false">retail/e-commerce <span class="count">0</span></button><button type="button" class="chip empty" data-group="sectors" data-value="education" aria-pressed="false">education <span class="count">0</span></button><button type="button" class="chip empty" data-group="sectors" data-value="government" aria-pressed="false">government <span class="count">0</span></button><button type="button" class="chip empty" data-group="sectors" data-value="critical infrastructure" aria-pressed="false">critical infrastructure <span class="count">0</span></button><button type="button" class="chip" data-group="sectors" data-value="manufacturing" aria-pressed="false">manufacturing <span class="count">1</span></button></div></div><div class="chip-group"><span class="group-label">Regulations and standards</span><div class="chips"><button type="button" class="chip empty" data-group="regulations" data-value="HIPAA" aria-pressed="false">HIPAA <span class="count">0</span></button><button type="button" class="chip empty" data-group="regulations" data-value="PCI DSS" aria-pressed="false">PCI DSS <span class="count">0</span></button><button type="button" class="chip empty" data-group="regulations" data-value="GDPR" aria-pressed="false">GDPR <span class="count">0</span></button><button type="button" class="chip empty" data-group="regulations" data-value="SEC disclosure" aria-pressed="false">SEC disclosure <span class="count">0</span></button><button type="button" class="chip empty" data-group="regulations" data-value="NIST / CMMC / FedRAMP" aria-pressed="false">NIST / CMMC / FedRAMP <span class="count">0</span></button><button type="button" class="chip empty" data-group="regulations" data-value="ISO 27001 / SOC 2" aria-pressed="false">ISO 27001 / SOC 2 <span class="count">0</span></button><button type="button" class="chip empty" data-group="regulations" data-value="NIS2 / DORA" aria-pressed="false">NIS2 / DORA <span class="count">0</span></button><button type="button" class="chip empty" data-group="regulations" data-value="privacy laws (US)" aria-pressed="false">privacy laws (US) <span class="count">0</span></button><button type="button" class="chip empty" data-group="regulations" data-value="breach notification" aria-pressed="false">breach notification <span class="count">0</span></button></div></div><div class="chip-group"><span class="group-label">Source type</span><div class="chips"><button type="button" class="chip" data-group="types" data-value="news" aria-pressed="false">News <span class="count">2</span></button><button type="button" class="chip" data-group="types" data-value="research" aria-pressed="false">Threat research <span class="count">1</span></button><button type="button" class="chip" data-group="types" data-value="government" aria-pressed="false">Government <span class="count">0</span></button><button type="button" class="chip" data-group="types" data-value="analysis" aria-pressed="false">Analysis <span class="count">0</span></button></div></div>
+      <div class="filter-row">
+        <input type="text" id="profile-name" maxlength="60" placeholder="Name this filter set, for example Healthcare SOC" aria-label="Profile name">
+        <button type="button" id="profile-save">Save as profile</button>
+      </div>
+      <p class="hint">Saved profiles are stored in this browser only. Use "Copy link" to open the same filters on another device.
+      Sector and regulation tags are keyword-based hints, not a compliance assessment.</p>
+    </div>
+  </details>
+  <span id="profile-msg" class="msg" role="status"></span>
+</section>
+<p id="filter-status" class="muted" role="status"></p>
+<h2>Headlines <span class="h-count">2</span></h2>
+<ul class="list" id="headlines"><li class="card item" data-topics="data breach" data-sectors="manufacturing" data-regulations="" data-type="news" data-watch="0" data-search="iris ohyama data cloud breach exposes info of 7.7 million customers bleepingcomputer" data-published="2026-11-08T15:43:08+00:00">
+  <a class="title" href="https://www.bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers/" rel="noopener noreferrer">Iris Ohyama data cloud breach exposes info of 7.7 million customers</a>
+  <div class="meta">BleepingComputer · News · Nov 8, 10:43 AM </div>
+  
+  <div class="badges"><span class="badge tag">data breach</span><span class="badge sector">manufacturing</span></div>
+</li><li class="card item" data-topics="" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="brava security emerges from stealth with $15 million in funding securityweek" data-published="2026-11-08T12:14:00+00:00">
+  <a class="title" href="https://www.securityweek.com/brava-security-emerges-from-stealth-with-15-million-in-funding/" rel="noopener noreferrer">Brava Security Emerges From Stealth With $15 Million in Funding</a>
+  <div class="meta">SecurityWeek · News · Nov 8, 7:14 AM </div>
+  
+  <div class="badges"></div>
+</li></ul><p class="muted empty-msg" data-for="headlines" hidden>No stories match these filters.</p>
+<h2>Threat research <span class="h-count">1</span></h2>
+<ul class="list" id="research"><li class="card item" data-topics="vulnerability|identity" data-sectors="" data-regulations="" data-type="research" data-watch="0" data-search="scans for sshole vulnerability (cve-2026-123158), (sun, nov 8th) sans internet storm center" data-published="2026-11-08T15:44:33+00:00">
+  <a class="title" href="https://isc.sans.edu/diary/rss/33498" rel="noopener noreferrer">Scans for Sshole Vulnerability (CVE-2026-123158), (Sun, Nov 8th)</a>
+  <div class="meta">SANS Internet Storm Center · Threat research · Nov 8, 10:44 AM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span><span class="badge tag">identity</span></div>
+</li></ul><p class="muted empty-msg" data-for="research" hidden>No stories match these filters.</p>
+<details class="health"><summary>Source status · 18 of 19 healthy</summary><table><tr><td>CISA Known Exploited Vulnerabilities</td><td><span class="badge ok">ok</span></td><td class="muted">3 new · catalog 2026.11.06</td></tr><tr><td>BleepingComputer</td><td><span class="badge ok">ok</span></td><td class="muted">8 new · newest post Nov 8</td></tr><tr><td>The Hacker News</td><td><span class="badge ok">ok</span></td><td class="muted">1 new · newest post Nov 7</td></tr><tr><td>The Record</td><td><span class="badge ok">ok</span></td><td class="muted">2 new · newest post Nov 6</td></tr><tr><td>SecurityWeek</td><td><span class="badge ok">ok</span></td><td class="muted">3 new · newest post Nov 8</td></tr><tr><td>Dark Reading</td><td><span class="badge ok">ok</span></td><td class="muted">2 new · newest post Nov 6</td></tr><tr><td>Krebs on Security</td><td><span class="badge ok">ok</span></td><td class="muted">0 new · newest post Nov 4</td></tr><tr><td>Ars Technica Security</td><td><span class="badge ok">ok</span></td><td class="muted">2 new · newest post Nov 7</td></tr><tr><td>The HIPAA Journal</td><td><span class="badge ok">ok</span></td><td class="muted">1 new · newest post Nov 6</td></tr><tr><td>Microsoft Security blog</td><td><span class="badge ok">ok</span></td><td class="muted">1 new · newest post Nov 6</td></tr><tr><td>Cisco Talos</td><td><span class="badge ok">ok</span></td><td class="muted">0 new · newest post Nov 5</td></tr><tr><td>Palo Alto Unit 42</td><td><span class="badge ok">ok</span></td><td class="muted">1 new · newest post Nov 6</td></tr><tr><td>Check Point Research</td><td><span class="badge ok">ok</span></td><td class="muted">0 new · newest post Nov 5</td></tr><tr><td>Sophos News</td><td><span class="badge danger">error</span></td><td class="muted">HTTPSConnectionPool(host=&#x27;www.sophos.com&#x27;, port=443): Read timed out. (read timeout=20)</td></tr><tr><td>Kaspersky Securelist</td><td><span class="badge ok">ok</span></td><td class="muted">0 new · newest post Nov 6</td></tr><tr><td>ESET WeLiveSecurity</td><td><span class="badge ok">ok</span></td><td class="muted">0 new · newest post Nov 4</td></tr><tr><td>SANS Internet Storm Center</td><td><span class="badge ok">ok</span></td><td class="muted">1 new · newest post Nov 8</td></tr><tr><td>UK NCSC</td><td><span class="badge ok">ok</span></td><td class="muted">0 new · newest post Nov 3</td></tr><tr><td>Schneier on Security</td><td><span class="badge ok">ok</span></td><td class="muted">1 new · newest post Nov 6</td></tr></table><p class="hint">"Stale" means the newest post in a feed is more than 30 days old: the feed address may have changed.</p></details>
+</main>
+<footer>
+  <p>Built by Shanna Staartjes. Headlines link to the original sources; summaries are not republished.
+  Vulnerability data: CISA Known Exploited Vulnerabilities catalog. Sector and regulation tags are keyword-based hints, not compliance advice.</p>
+</footer>
+<script type="application/json" id="profiles-data">[{"name": "Healthcare / HIPAA", "match": "any", "watch": false, "q": "", "topics": [], "sectors": ["healthcare"], "regulations": ["HIPAA"], "types": []}, {"name": "Payments / PCI DSS", "match": "any", "watch": false, "q": "", "topics": [], "sectors": ["finance", "retail/e-commerce"], "regulations": ["PCI DSS"], "types": []}, {"name": "GRC and compliance", "match": "any", "watch": false, "q": "", "topics": [], "sectors": [], "regulations": ["HIPAA", "PCI DSS", "GDPR", "SEC disclosure", "NIST / CMMC / FedRAMP", "ISO 27001 / SOC 2", "NIS2 / DORA", "privacy laws (US)", "breach notification"], "types": []}, {"name": "SOC analyst", "match": "any", "watch": false, "q": "", "topics": ["malware", "phishing", "ransomware", "identity"], "sectors": [], "regulations": [], "types": []}, {"name": "Microsoft 365 admin", "match": "any", "watch": false, "q": "", "topics": ["cloud/M365", "identity"], "sectors": [], "regulations": [], "types": []}, {"name": "Vulnerability management", "match": "any", "watch": false, "q": "", "topics": ["vulnerability"], "sectors": [], "regulations": [], "types": []}, {"name": "Public sector and education", "match": "any", "watch": false, "q": "", "topics": [], "sectors": ["government", "education"], "regulations": ["NIST / CMMC / FedRAMP"], "types": []}, {"name": "Threat research only", "match": "any", "watch": false, "q": "", "topics": [], "sectors": [], "regulations": [], "types": ["research"]}]</script>
+<script src="../app.js"></script>
+</body>
+</html>
