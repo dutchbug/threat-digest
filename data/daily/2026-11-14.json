@@ -1,0 +1,497 @@
+{
+  "date": "2026-11-14",
+  "items": [
+    {
+      "id": "10621b32b80dd191",
+      "title": "Upcoming Speaking Engagements",
+      "link": "https://www.schneier.com/blog/archives/2026/11/upcoming-speaking-engagements-62.html",
+      "source": "Schneier on Security",
+      "type": "analysis",
+      "published": "2026-11-14T17:02:39+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "4118a50de2906a06",
+      "title": "US disrupts North Korean campaign behind $400 million crypto theft",
+      "link": "https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/",
+      "source": "BleepingComputer",
+      "type": "news",
+      "published": "2026-11-14T15:15:49+00:00",
+      "tags": [],
+      "sectors": [
+        "government"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "50c4e78b2a7d86bb",
+      "title": "Is AI Making Us Worse at Cybersecurity?",
+      "link": "https://www.securityweek.com/is-ai-making-us-worse-at-cybersecurity/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-14T14:00:00+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "b58e8e6c37edfa61",
+      "title": "Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection",
+      "link": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html",
+      "source": "The Hacker News",
+      "type": "news",
+      "published": "2026-11-14T12:38:35+00:00",
+      "tags": [
+        "vulnerability"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "645280530d29a7ba",
+      "title": "Apple Reveals How Secure Exclaves Shield Camera and Microphone Data",
+      "link": "https://www.securityweek.com/apple-reveals-how-secure-exclaves-shield-camera-and-microphone-data/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-14T11:00:00+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "6b192ebf562c81db",
+      "title": "No Signs of Hacking in FAA Ground Stop as FBI Reportedly Probes Software Update",
+      "link": "https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-14T08:40:22+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "26bc7212e5d9b4f9",
+      "title": "Friday Squid Blogging: Pacific Flying Squid Populations Dropping in Korean Waters",
+      "link": "https://www.schneier.com/blog/archives/2026/11/friday-squid-blogging-pacific-flying-squid-populations-dropping-in-korean-waters.html",
+      "source": "Schneier on Security",
+      "type": "analysis",
+      "published": "2026-11-13T22:00:46+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "81b8c69b8132f728",
+      "title": "FAA Ground Stop Issued Due to ‘Extraordinary Circumstances’",
+      "link": "https://www.securityweek.com/faa-ground-stop-issued-due-to-extraordinary-circumstances/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-13T21:33:27+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "f0f23fdb08d7bf54",
+      "title": "FBI flash alert says Artex tool automating cyberattacks at ‘machine speed’",
+      "link": "https://therecord.media/artex-ai-tool-fbi-flash-alert",
+      "source": "The Record",
+      "type": "news",
+      "published": "2026-11-13T21:32:00+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "1a880fae4ea1996b",
+      "title": "SCKit abuses ScreenConnect to deploy remote access and target technician sessions",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/11/13/sckit-abuses-screenconnect-deploy-remote-access-target-technician-sessions/",
+      "source": "Microsoft Security blog",
+      "type": "research",
+      "published": "2026-11-13T21:31:44+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "f0ecb1e0931aad91",
+      "title": "ARTEX and beyond: AI-enabled penetration testing platforms",
+      "link": "https://blog.talosintelligence.com/artex-and-beyond/",
+      "source": "Cisco Talos",
+      "type": "research",
+      "published": "2026-11-13T20:57:13+00:00",
+      "tags": [
+        "vulnerability"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "e12779d5806a7d26",
+      "title": "ArcticRAT Cybercrime Gang Profiles Victim Finances With AI",
+      "link": "https://www.darkreading.com/mobile-security/arcticrat-cybercrime-gang-profiles-victim-finances-ai",
+      "source": "Dark Reading",
+      "type": "news",
+      "published": "2026-11-13T20:20:27+00:00",
+      "tags": [
+        "malware"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "810ecd44c3ac2c42",
+      "title": "City of Osaka warns of data breach impacting 1 million as Japan reels from dozens of cyber incidents",
+      "link": "https://therecord.media/city-of-osaka-japan-email-data-breach",
+      "source": "The Record",
+      "type": "news",
+      "published": "2026-11-13T19:43:00+00:00",
+      "tags": [
+        "data breach"
+      ],
+      "sectors": [
+        "government"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "e43edd1058c2cea5",
+      "title": "Trezor confirms crypto-stealing implants in three wallets, releases fix",
+      "link": "https://www.bleepingcomputer.com/news/cryptocurrency/trezor-confirms-crypto-stealing-implants-in-three-wallets-releases-fix/",
+      "source": "BleepingComputer",
+      "type": "news",
+      "published": "2026-11-13T19:38:36+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "cf42b36aeb3f1a4f",
+      "title": "NYC to bar surveillance pricing as momentum for bans grows nationwide",
+      "link": "https://therecord.media/nyc-council-passes-bill-ban-surveillance-pricing",
+      "source": "The Record",
+      "type": "news",
+      "published": "2026-11-13T18:35:00+00:00",
+      "tags": [],
+      "sectors": [
+        "government"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "e8f97b43bd2a3404",
+      "title": "GTA VI isn’t out yet – and the scams are already in full swing",
+      "link": "https://www.welivesecurity.com/en/cybersecurity/gta-vi-isnt-out-yet-scams-full-swing/",
+      "source": "ESET WeLiveSecurity",
+      "type": "research",
+      "published": "2026-11-13T10:00:00+00:00",
+      "tags": [
+        "malware"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    }
+  ],
+  "kev": [
+    {
+      "cve": "CVE-2026-123039",
+      "vendor": "Check Point",
+      "product": "Multiple Products",
+      "name": "Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
+      "description": "Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-13",
+      "due": "2026-11-16",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-114713",
+      "vendor": "UnrealIRCd",
+      "product": "UnrealIRCd",
+      "name": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
+      "description": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-13",
+      "due": "2026-11-16",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-20320",
+      "vendor": "Cisco",
+      "product": "BroadWorks",
+      "name": "Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability",
+      "description": "Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-10",
+      "due": "2026-11-24",
+      "ransomware": false,
+      "watch": [
+        "cisco"
+      ]
+    },
+    {
+      "cve": "CVE-2026-125350",
+      "vendor": "Google",
+      "product": "Chromium",
+      "name": "Google Chromium Use-After-Free Vulnerability",
+      "description": "Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-10",
+      "due": "2026-11-24",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-124194",
+      "vendor": "Microsoft",
+      "product": "Office",
+      "name": "Microsoft Office Outlook Missing User Interaction for Potentially Unsafe Action Vulnerability",
+      "description": "Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-10",
+      "due": "2026-11-24",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-116606",
+      "vendor": "Barracuda Networks",
+      "product": "Barracuda Email Security Gateway (ESG)",
+      "name": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+      "description": "Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration. This vulnerability can be chained with CVE-2026-111560.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-10",
+      "due": "2026-11-13",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-111793",
+      "vendor": "Openwave Messaging Limited",
+      "product": "Webtop Media Transcoder",
+      "name": "Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability",
+      "description": "Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experience.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-10",
+      "due": "2026-11-24",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-111560",
+      "vendor": "Barracuda Networks",
+      "product": "Multiple Products",
+      "name": "Barracuda Networks Multiple Products OS Command Injection Vulnerability",
+      "description": "Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability could allow an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed. This vulnerability can be chained with CVE-2026-116606",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-10",
+      "due": "2026-11-13",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-123218",
+      "vendor": "IBM",
+      "product": "Aspera Faspex",
+      "name": "IBM Aspera Faspex Incorrect Authorization Vulnerability",
+      "description": "IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-09",
+      "due": "2026-11-12",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-123158",
+      "vendor": "OpenBSD",
+      "product": "OpenSSH",
+      "name": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
+      "description": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-09",
+      "due": "2026-11-12",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-116779",
+      "vendor": "SignalWire",
+      "product": "FreeSwitch",
+      "name": "SignalWire FreeSwitch Code Injection Vulnerability",
+      "description": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-09",
+      "due": "2026-11-12",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-102895",
+      "vendor": "GPUStack",
+      "product": "GPUStack",
+      "name": "GPUStack Improper Authentication Vulnerability",
+      "description": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-09",
+      "due": "2026-11-12",
+      "ransomware": false,
+      "watch": []
+    }
+  ],
+  "health": [
+    {
+      "id": "cisa-kev",
+      "name": "CISA Known Exploited Vulnerabilities",
+      "status": "ok",
+      "items": 12,
+      "catalog_version": "2026.11.13"
+    },
+    {
+      "id": "bleepingcomputer",
+      "name": "BleepingComputer",
+      "status": "ok",
+      "items": 14,
+      "newest": "2026-11-14T15:15:49+00:00"
+    },
+    {
+      "id": "the-hacker-news",
+      "name": "The Hacker News",
+      "status": "ok",
+      "items": 13,
+      "newest": "2026-11-14T12:38:35+00:00"
+    },
+    {
+      "id": "the-record",
+      "name": "The Record",
+      "status": "ok",
+      "items": 5,
+      "newest": "2026-11-13T21:32:00+00:00"
+    },
+    {
+      "id": "securityweek",
+      "name": "SecurityWeek",
+      "status": "ok",
+      "items": 10,
+      "newest": "2026-11-14T14:00:00+00:00"
+    },
+    {
+      "id": "dark-reading",
+      "name": "Dark Reading",
+      "status": "ok",
+      "items": 5,
+      "newest": "2026-11-13T20:20:27+00:00"
+    },
+    {
+      "id": "krebs",
+      "name": "Krebs on Security",
+      "status": "ok",
+      "items": 0,
+      "newest": "2026-11-11T18:06:01+00:00"
+    },
+    {
+      "id": "ars-security",
+      "name": "Ars Technica Security",
+      "status": "ok",
+      "items": 1,
+      "newest": "2026-11-13T16:26:32+00:00"
+    },
+    {
+      "id": "hipaa-journal",
+      "name": "The HIPAA Journal",
+      "status": "ok",
+      "items": 3,
+      "newest": "2026-11-13T13:49:19+00:00"
+    },
+    {
+      "id": "microsoft-security-blog",
+      "name": "Microsoft Security blog",
+      "status": "ok",
+      "items": 1,
+      "newest": "2026-11-13T21:31:44+00:00"
+    },
+    {
+      "id": "talos",
+      "name": "Cisco Talos",
+      "status": "ok",
+      "items": 2,
+      "newest": "2026-11-13T20:57:13+00:00"
+    },
+    {
+      "id": "unit42",
+      "name": "Palo Alto Unit 42",
+      "status": "ok",
+      "items": 0,
+      "newest": "2026-11-12T15:00:31+00:00"
+    },
+    {
+      "id": "checkpoint-research",
+      "name": "Check Point Research",
+      "status": "ok",
+      "items": 0,
+      "newest": "2026-11-12T13:56:37+00:00"
+    },
+    {
+      "id": "sophos",
+      "name": "Sophos News",
+      "status": "error",
+      "items": 0,
+      "error": "HTTPSConnectionPool(host='www.sophos.com', port=443): Read timed out. (read timeout=20)"
+    },
+    {
+      "id": "securelist",
+      "name": "Kaspersky Securelist",
+      "status": "ok",
+      "items": 1,
+      "newest": "2026-11-13T09:00:43+00:00"
+    },
+    {
+      "id": "welivesecurity",
+      "name": "ESET WeLiveSecurity",
+      "status": "ok",
+      "items": 1,
+      "newest": "2026-11-13T10:00:00+00:00"
+    },
+    {
+      "id": "sans-isc",
+      "name": "SANS Internet Storm Center",
+      "status": "error",
+      "items": 0,
+      "error": "503 Server Error: Service Unavailable for url: https://isc.sans.edu/rssfeed.xml"
+    },
+    {
+      "id": "ncsc-uk",
+      "name": "UK NCSC",
+      "status": "ok",
+      "items": 0,
+      "newest": "2026-11-11T12:00:00+00:00"
+    },
+    {
+      "id": "schneier",
+      "name": "Schneier on Security",
+      "status": "ok",
+      "items": 3,
+      "newest": "2026-11-14T17:02:39+00:00"
+    }
+  ],
+  "generated_at": "2026-11-14T17:04:09.566629+00:00"
+}
