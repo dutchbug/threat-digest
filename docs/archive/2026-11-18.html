@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Daily security news, threat research and actively exploited vulnerabilities, collected automatically. Weekly analysis written by me.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:">
+<meta name="referrer" content="no-referrer">
+<title>2026-11-18 · Threat digest</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../index.html">Threat digest</a>
+  <nav>
+    <a href="../index.html">Today</a>
+    <a href="../recent.html">Last 7 days</a>
+    <a href="../archive/index.html">Archive</a>
+    <a href="../weekly/index.html">Weekly analysis</a>
+    <a href="../about.html">About</a>
+  </nav>
+</header>
+<main>
+<h1>Wednesday, November 18, 2026</h1>
+<p class="muted">Last updated Nov 18, 2:23 PM · collected automatically <span id="new-since"></span></p>
+<section class="stats">
+  <div class="stat"><span>Stories</span><strong>43</strong><small>51 articles</small></div>
+  <div class="stat"><span>Research reports</span><strong>7</strong></div>
+  <div class="stat"><span>Newly exploited (KEV)</span><strong class="danger">7</strong><small>last 7 days</small></div>
+  <div class="stat"><span>Watchlist hits</span><strong class="warning">5</strong></div>
+</section>
+<h2>Actively exploited <span class="h-count">7</span></h2>
+<p class="muted">From the CISA Known Exploited Vulnerabilities catalog, added in the last 7 days.</p>
+<ul class="list" id="kev-list"><li class="card kev" data-watch="0" data-search="cve-2026-90817 vanderbilt university research electronic data capture (redcap) vanderbilt university research electronic data capture (redcap) code injection vulnerability">
+  <div class="row"><a class="mono" href="https://nvd.nist.gov/vuln/detail/CVE-2026-90817" rel="noopener noreferrer">CVE-2026-90817</a>
+  <span class="muted">added 2026-11-18 · fix by 2026-11-21</span></div>
+  <div class="title">Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability</div>
+  <p class="desc">Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import processing. Exploitation requires knowledge of a valid public survey hash.</p>
+  <div class="badges"></div>
+</li><li class="card kev" data-watch="0" data-search="cve-2026-90436 apache axis apache axis unsafe reflection vulnerability">
+  <div class="row"><a class="mono" href="https://nvd.nist.gov/vuln/detail/CVE-2026-90436" rel="noopener noreferrer">CVE-2026-90436</a>
+  <span class="muted">added 2026-11-18 · fix by 2026-11-21</span></div>
+  <div class="title">Apache Axis Unsafe Reflection Vulnerability</div>
+  <p class="desc">Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.</p>
+  <div class="badges"></div>
+</li><li class="card kev" data-watch="0" data-search="cve-2026-40217 berriai litellm berriai litellm unprotected alternate channel vulnerability">
+  <div class="row"><a class="mono" href="https://nvd.nist.gov/vuln/detail/CVE-2026-40217" rel="noopener noreferrer">CVE-2026-40217</a>
+  <span class="muted">added 2026-11-18 · fix by 2026-12-02</span></div>
+  <div class="title">BerriAI LiteLLM Unprotected Alternate Channel Vulnerability</div>
+  <p class="desc">BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.</p>
+  <div class="badges"></div>
+</li></ul>
+<details class="more"><summary>Show 4 more</summary><ul class="list"><li class="card kev" data-watch="0" data-search="cve-2024-10441 synology diskstation manager (dsm) synology diskstation manager (dsm) improper encoding or escaping of output vulnerability">
+  <div class="row"><a class="mono" href="https://nvd.nist.gov/vuln/detail/CVE-2024-10441" rel="noopener noreferrer">CVE-2024-10441</a>
+  <span class="muted">added 2026-11-18 · fix by 2026-11-21</span></div>
+  <div class="title">Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability</div>
+  <p class="desc">Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.</p>
+  <div class="badges"></div>
+</li><li class="card kev" data-watch="0" data-search="cve-2026-115731 perforce puppet enterprise perforce puppet enterprise deserialization of untrusted data vulnerability">
+  <div class="row"><a class="mono" href="https://nvd.nist.gov/vuln/detail/CVE-2026-115731" rel="noopener noreferrer">CVE-2026-115731</a>
+  <span class="muted">added 2026-11-17 · fix by 2026-12-01</span></div>
+  <div class="title">Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability</div>
+  <p class="desc">Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet’s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the service user by submitting a report containing a crafted rich-data type through a PUT request. If the certificate authority automatically signs requests without strong verification, an unauthenticated network attacker can obtain a valid certificate and exploit the vulnerability.</p>
+  <div class="badges"></div>
+</li><li class="card kev" data-watch="0" data-search="cve-2026-123039 check point multiple products check point multiple products incorrect permission assignment for critical resource vulnerability">
+  <div class="row"><a class="mono" href="https://nvd.nist.gov/vuln/detail/CVE-2026-123039" rel="noopener noreferrer">CVE-2026-123039</a>
+  <span class="muted">added 2026-11-13 · fix by 2026-11-16</span></div>
+  <div class="title">Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability</div>
+  <p class="desc">Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.</p>
+  <div class="badges"></div>
+</li><li class="card kev" data-watch="0" data-search="cve-2026-114713 unrealircd unrealircd unrealircd improper neutralization of delimiters vulnerability">
+  <div class="row"><a class="mono" href="https://nvd.nist.gov/vuln/detail/CVE-2026-114713" rel="noopener noreferrer">CVE-2026-114713</a>
+  <span class="muted">added 2026-11-13 · fix by 2026-11-16</span></div>
+  <div class="title">UnrealIRCd Improper Neutralization of Delimiters Vulnerability</div>
+  <p class="desc">UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.</p>
+  <div class="badges"></div>
+</li></ul></details>
+<section class="filter-panel" id="filters" hidden aria-label="Filters">
+  <div class="filter-row">
+    <label for="profile-select" class="group-label">Profile</label>
+    <select id="profile-select"></select>
+    <input type="search" id="filter-search" placeholder="Search, for example fortinet" aria-label="Search stories">
+  </div>
+  <div class="filter-row">
+    <label class="inline"><input type="checkbox" id="filter-watch"> Watchlist only</label>
+    <label class="inline"><input type="checkbox" id="compact-view"> Compact view</label>
+    <span class="spacer"></span>
+    <button type="button" id="copy-link">Copy link</button>
+    <button type="button" id="clear-filters">Clear filters</button>
+    <button type="button" id="profile-delete" hidden>Delete profile</button>
+  </div>
+  <details id="more-filters">
+    <summary>Topics, sectors, regulations and source types <span id="active-summary" class="muted"></span></summary>
+    <div class="filter-body">
+      <span class="inline match" role="radiogroup" aria-label="Match mode">Show stories that match
+        <label class="inline"><input type="radio" name="match" value="any" checked> any filter</label>
+        <label class="inline"><input type="radio" name="match" value="all"> every group</label>
+      </span>
+      <div class="chip-group"><span class="group-label">Topics</span><div class="chips"><button type="button" class="chip" data-group="topics" data-value="ransomware" aria-pressed="false">ransomware <span class="count">3</span></button><button type="button" class="chip" data-group="topics" data-value="phishing" aria-pressed="false">phishing <span class="count">2</span></button><button type="button" class="chip" data-group="topics" data-value="cloud/M365" aria-pressed="false">cloud/M365 <span class="count">1</span></button><button type="button" class="chip" data-group="topics" data-value="vulnerability" aria-pressed="false">vulnerability <span class="count">16</span></button><button type="button" class="chip" data-group="topics" data-value="data breach" aria-pressed="false">data breach <span class="count">5</span></button><button type="button" class="chip" data-group="topics" data-value="malware" aria-pressed="false">malware <span class="count">7</span></button><button type="button" class="chip" data-group="topics" data-value="identity" aria-pressed="false">identity <span class="count">3</span></button><button type="button" class="chip empty" data-group="topics" data-value="AI" aria-pressed="false">AI <span class="count">0</span></button><button type="button" class="chip" data-group="topics" data-value="nation-state" aria-pressed="false">nation-state <span class="count">4</span></button></div></div><div class="chip-group"><span class="group-label">Sectors</span><div class="chips"><button type="button" class="chip" data-group="sectors" data-value="healthcare" aria-pressed="false">healthcare <span class="count">2</span></button><button type="button" class="chip" data-group="sectors" data-value="finance" aria-pressed="false">finance <span class="count">1</span></button><button type="button" class="chip empty" data-group="sectors" data-value="retail/e-commerce" aria-pressed="false">retail/e-commerce <span class="count">0</span></button><button type="button" class="chip empty" data-group="sectors" data-value="education" aria-pressed="false">education <span class="count">0</span></button><button type="button" class="chip" data-group="sectors" data-value="government" aria-pressed="false">government <span class="count">3</span></button><button type="button" class="chip empty" data-group="sectors" data-value="critical infrastructure" aria-pressed="false">critical infrastructure <span class="count">0</span></button><button type="button" class="chip empty" data-group="sectors" data-value="manufacturing" aria-pressed="false">manufacturing <span class="count">0</span></button></div></div><div class="chip-group"><span class="group-label">Regulations and standards</span><div class="chips"><button type="button" class="chip" data-group="regulations" data-value="HIPAA" aria-pressed="false">HIPAA <span class="count">3</span></button><button type="button" class="chip empty" data-group="regulations" data-value="PCI DSS" aria-pressed="false">PCI DSS <span class="count">0</span></button><button type="button" class="chip empty" data-group="regulations" data-value="GDPR" aria-pressed="false">GDPR <span class="count">0</span></button><button type="button" class="chip empty" data-group="regulations" data-value="SEC disclosure" aria-pressed="false">SEC disclosure <span class="count">0</span></button><button type="button" class="chip empty" data-group="regulations" data-value="NIST / CMMC / FedRAMP" aria-pressed="false">NIST / CMMC / FedRAMP <span class="count">0</span></button><button type="button" class="chip empty" data-group="regulations" data-value="ISO 27001 / SOC 2" aria-pressed="false">ISO 27001 / SOC 2 <span class="count">0</span></button><button type="button" class="chip empty" data-group="regulations" data-value="NIS2 / DORA" aria-pressed="false">NIS2 / DORA <span class="count">0</span></button><button type="button" class="chip empty" data-group="regulations" data-value="privacy laws (US)" aria-pressed="false">privacy laws (US) <span class="count">0</span></button><button type="button" class="chip empty" data-group="regulations" data-value="breach notification" aria-pressed="false">breach notification <span class="count">0</span></button></div></div><div class="chip-group"><span class="group-label">Source type</span><div class="chips"><button type="button" class="chip" data-group="types" data-value="news" aria-pressed="false">News <span class="count">42</span></button><button type="button" class="chip" data-group="types" data-value="research" aria-pressed="false">Threat research <span class="count">7</span></button><button type="button" class="chip" data-group="types" data-value="government" aria-pressed="false">Government <span class="count">0</span></button><button type="button" class="chip" data-group="types" data-value="analysis" aria-pressed="false">Analysis <span class="count">1</span></button></div></div>
+      <div class="filter-row">
+        <input type="text" id="profile-name" maxlength="60" placeholder="Name this filter set, for example Healthcare SOC" aria-label="Profile name">
+        <button type="button" id="profile-save">Save as profile</button>
+      </div>
+      <p class="hint">Saved profiles are stored in this browser only. Use "Copy link" to open the same filters on another device.
+      Sector and regulation tags are keyword-based hints, not a compliance assessment.</p>
+    </div>
+  </details>
+  <span id="profile-msg" class="msg" role="status"></span>
+</section>
+<p id="filter-status" class="muted" role="status"></p>
+<h2>Headlines <span class="h-count">43</span></h2>
+<ul class="list" id="headlines"><li class="card item" data-topics="" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="lawmakers call on white house to develop defensive ai cyber systems the record" data-published="2026-11-18T19:00:00+00:00">
+  <a class="title" href="https://therecord.media/ai-cyber-white-house" rel="noopener noreferrer">Lawmakers call on White House to develop defensive AI cyber systems</a>
+  <div class="meta">The Record · News · Nov 18, 2:00 PM </div>
+  
+  <div class="badges"></div>
+</li><li class="card item" data-topics="vulnerability" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="java4shell flaw threatens global enterprises, java application ecosystem dark reading" data-published="2026-11-18T16:54:52+00:00">
+  <a class="title" href="https://www.darkreading.com/vulnerabilities-threats/java4shell-flaw-threatens-global-java-application-ecosystem" rel="noopener noreferrer">Java4Shell Flaw Threatens Global Enterprises, Java Application Ecosystem</a>
+  <div class="meta">Dark Reading · News · Nov 18, 11:54 AM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span></div>
+</li><li class="card item" data-topics="" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="nsa continues response to interruptions in classified internal network the record" data-published="2026-11-18T16:19:00+00:00">
+  <a class="title" href="https://therecord.media/nsa-continues-response-to-nsa-net-problems" rel="noopener noreferrer">NSA continues response to interruptions in classified internal network</a>
+  <div class="meta">The Record · News · Nov 18, 11:19 AM </div>
+  
+  <div class="badges"></div>
+</li><li class="card item" data-topics="" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="verosecurity raises $11 million for ai security engineering platform securityweek" data-published="2026-11-18T15:30:42+00:00">
+  <a class="title" href="https://www.securityweek.com/verosecurity-raises-11-million-for-ai-security-engineering-platform/" rel="noopener noreferrer">VeroSecurity Raises $11 Million for AI Security Engineering Platform</a>
+  <div class="meta">SecurityWeek · News · Nov 18, 10:30 AM </div>
+  
+  <div class="badges"></div>
+</li><li class="card item" data-topics="nation-state" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="russian cyber-espionage group used stolen cloud data to hack into organizations, google says the record" data-published="2026-11-18T15:15:00+00:00">
+  <a class="title" href="https://therecord.media/russia-cyber-espionage-google" rel="noopener noreferrer">Russian cyber-espionage group used stolen cloud data to hack into organizations, Google says</a>
+  <div class="meta">The Record · News · Nov 18, 10:15 AM </div>
+  
+  <div class="badges"><span class="badge tag">nation-state</span></div>
+</li><li class="card item" data-topics="" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="from deepfakes to helpdesk impersonation: why stronger verification matters bleepingcomputer" data-published="2026-11-18T15:00:10+00:00">
+  <a class="title" href="https://www.bleepingcomputer.com/news/security/from-deepfakes-to-helpdesk-impersonation-why-stronger-verification-matters/" rel="noopener noreferrer">From Deepfakes to Helpdesk Impersonation: Why Stronger Verification Matters</a>
+  <div class="meta">BleepingComputer · News · Nov 18, 10:00 AM </div>
+  
+  <div class="badges"></div>
+</li><li class="card item" data-topics="" data-sectors="finance" data-regulations="" data-type="news" data-watch="0" data-search="british hacker gets 6 year sentence for $11.6m crypto theft scheme the record" data-published="2026-11-18T14:48:00+00:00">
+  <a class="title" href="https://therecord.media/british-hacker-gets-six-year-sentence-scattered-spider" rel="noopener noreferrer">British hacker gets 6 year sentence for $11.6M crypto theft scheme</a>
+  <div class="meta">The Record · News · Nov 18, 9:48 AM </div>
+  
+  <div class="badges"><span class="badge sector">finance</span></div>
+</li><li class="card item" data-topics="malware|nation-state" data-sectors="government" data-regulations="" data-type="news" data-watch="0" data-search="new eggstreme malware variant goes silent to evade security tools in government attacks the hacker news" data-published="2026-11-18T14:11:28+00:00">
+  <a class="title" href="https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html" rel="noopener noreferrer">New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks</a>
+  <div class="meta">The Hacker News · News · Nov 18, 9:11 AM </div>
+  
+  <div class="badges"><span class="badge tag">malware</span><span class="badge tag">nation-state</span><span class="badge sector">government</span></div>
+</li><li class="card item" data-topics="" data-sectors="government" data-regulations="" data-type="news" data-watch="0" data-search="major brazilian signature apps enable rce &amp; fraud dark reading" data-published="2026-11-18T14:00:00+00:00">
+  <a class="title" href="https://www.darkreading.com/vulnerabilities-threats/major-brazilian-signature-app-rce-fraud" rel="noopener noreferrer">Major Brazilian Signature Apps Enable RCE &amp; Fraud</a>
+  <div class="meta">Dark Reading · News · Nov 18, 9:00 AM </div>
+  
+  <div class="badges"><span class="badge sector">government</span></div>
+</li><li class="card item" data-topics="" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="ice hockey governing body website defaced amid dispute over russia&#x27;s exclusion the record" data-published="2026-11-18T13:45:00+00:00">
+  <a class="title" href="https://therecord.media/russia-hockey-cyberattack-championships" rel="noopener noreferrer">Ice hockey governing body website defaced amid dispute over Russia&#x27;s exclusion</a>
+  <div class="meta">The Record · News · Nov 18, 8:45 AM </div>
+  
+  <div class="badges"></div>
+</li><li class="card item" data-topics="phishing|data breach|nation-state" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="russian apt poses as employee of hacked firm to breach another us organization securityweek" data-published="2026-11-18T13:33:47+00:00">
+  <a class="title" href="https://www.securityweek.com/russian-apt-poses-as-employee-of-hacked-firm-to-breach-another-us-organization/" rel="noopener noreferrer">Russian APT Poses as Employee of Hacked Firm to Breach Another US Organization</a>
+  <div class="meta">SecurityWeek · News · Nov 18, 8:33 AM </div>
+  
+  <div class="badges"><span class="badge tag">phishing</span><span class="badge tag">data breach</span><span class="badge tag">nation-state</span></div>
+</li><li class="card item" data-topics="" data-sectors="healthcare" data-regulations="HIPAA" data-type="news" data-watch="0" data-search="healthcare employees sharing patient data with ai tools viewed as major emerging risk the hipaa journal" data-published="2026-11-18T13:27:14+00:00">
+  <a class="title" href="https://www.hipaajournal.com/healthcare-employees-sharing-patient-data-ai-tools-major-risk/" rel="noopener noreferrer">Healthcare Employees Sharing Patient Data with AI Tools Viewed as Major Emerging Risk</a>
+  <div class="meta">The HIPAA Journal · News · Nov 18, 8:27 AM </div>
+  
+  <div class="badges"><span class="badge sector">healthcare</span><span class="badge reg">HIPAA</span></div>
+</li><li class="card item" data-topics="" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="last of five defendants sentenced in us scattered spider hacking case securityweek" data-published="2026-11-18T13:19:32+00:00">
+  <a class="title" href="https://www.securityweek.com/last-of-five-defendants-sentenced-in-us-scattered-spider-hacking-case/" rel="noopener noreferrer">Last of Five Defendants Sentenced in US Scattered Spider Hacking Case</a>
+  <div class="meta">SecurityWeek · News · Nov 18, 8:19 AM </div>
+  
+  <div class="badges"></div>
+</li><li class="card item" data-topics="ransomware" data-sectors="healthcare" data-regulations="HIPAA" data-type="news" data-watch="0" data-search="alleged u.s hospital ransomware attacker extradited to u.s. to face charges the hipaa journal" data-published="2026-11-18T13:10:52+00:00">
+  <a class="title" href="https://www.hipaajournal.com/alleged-us-hospital-ransomware-attacker-extradited/" rel="noopener noreferrer">Alleged U.S Hospital Ransomware Attacker Extradited to U.S. to Face Charges</a>
+  <div class="meta">The HIPAA Journal · News · Nov 18, 8:10 AM </div>
+  
+  <div class="badges"><span class="badge tag">ransomware</span><span class="badge sector">healthcare</span><span class="badge reg">HIPAA</span></div>
+</li><li class="card item watched" data-topics="" data-sectors="" data-regulations="" data-type="news" data-watch="1" data-search="new attack bypasses tpm lockout to crack windows hello and bitlocker pins in days, not years the hacker news" data-published="2026-11-18T12:28:30+00:00">
+  <a class="title" href="https://thehackernews.com/2026/11/flash-chip-attack-bypasses-tpm-lockout.html" rel="noopener noreferrer">New Attack Bypasses TPM Lockout to Crack Windows Hello and BitLocker PINs in Days, Not Years</a>
+  <div class="meta">The Hacker News · News · Nov 18, 7:28 AM </div>
+  
+  <div class="badges"><span class="badge watch">windows</span></div>
+</li><li class="card item" data-topics="vulnerability" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="ai pentesting checklist for web apps: 15 questions to ask before choosing a vendor the hacker news" data-published="2026-11-18T12:15:00+00:00">
+  <a class="title" href="https://thehackernews.com/2026/11/ai-pentesting-checklist-for-web-apps-15.html" rel="noopener noreferrer">AI Pentesting Checklist for Web Apps: 15 Questions to Ask Before Choosing a Vendor</a>
+  <div class="meta">The Hacker News · News · Nov 18, 7:15 AM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span></div>
+</li><li class="card item" data-topics="vulnerability" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="microsoft takes perception agentic security platform out of preview securityweek" data-published="2026-11-18T12:14:23+00:00">
+  <a class="title" href="https://www.securityweek.com/microsoft-takes-perception-agentic-security-platform-out-of-preview/" rel="noopener noreferrer">Microsoft Takes Perception Agentic Security Platform Out of Preview</a>
+  <div class="meta">SecurityWeek · News · Nov 18, 7:14 AM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span></div>
+</li><li class="card item" data-topics="" data-sectors="government" data-regulations="" data-type="analysis" data-watch="0" data-search="france is blaming iran for the fridge cyberattack schneier on security" data-published="2026-11-18T12:05:35+00:00">
+  <a class="title" href="https://www.schneier.com/blog/archives/2026/11/france-is-blaming-iran-for-the-fridge-cyberattack.html" rel="noopener noreferrer">France Is Blaming Iran for the Fridge Cyberattack</a>
+  <div class="meta">Schneier on Security · Analysis · Nov 18, 7:05 AM </div>
+  
+  <div class="badges"><span class="badge sector">government</span></div>
+</li><li class="card item" data-topics="" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="ciso conversations: patti degnan – part of the job is deciding what not to do securityweek" data-published="2026-11-18T12:00:00+00:00">
+  <a class="title" href="https://www.securityweek.com/ciso-conversations-patti-degnan-part-of-the-job-is-deciding-what-not-to-do/" rel="noopener noreferrer">CISO Conversations: Patti Degnan – Part of the Job Is Deciding What Not to Do</a>
+  <div class="meta">SecurityWeek · News · Nov 18, 7:00 AM </div>
+  
+  <div class="badges"></div>
+</li><li class="card item" data-topics="vulnerability" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="java4shell flaw (cve-2026-114938) enables pre-auth rce in jira, jenkins, keycloak and more the hacker news" data-published="2026-11-18T11:55:49+00:00">
+  <a class="title" href="https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html" rel="noopener noreferrer">Java4Shell Flaw (CVE-2026-114938) Enables Pre-Auth RCE in Jira, Jenkins, Keycloak and More</a>
+  <div class="meta">The Hacker News · News · Nov 18, 6:55 AM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span></div>
+</li><li class="card item" data-topics="" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="dizigom illegal streaming service with 21m monthly visits shuts down bleepingcomputer" data-published="2026-11-18T11:50:25+00:00">
+  <a class="title" href="https://www.bleepingcomputer.com/news/security/dizigom-illegal-streaming-service-with-21m-monthly-visits-shuts-down/" rel="noopener noreferrer">Dizigom illegal streaming service with 21M monthly visits shuts down</a>
+  <div class="meta">BleepingComputer · News · Nov 18, 6:50 AM </div>
+  
+  <div class="badges"></div>
+</li><li class="card item watched" data-topics="vulnerability" data-sectors="" data-regulations="" data-type="news" data-watch="1" data-search="chrome 158 patches 204 vulnerabilities securityweek" data-published="2026-11-18T11:43:22+00:00">
+  <a class="title" href="https://www.securityweek.com/chrome-158-patches-204-vulnerabilities/" rel="noopener noreferrer">Chrome 158 Patches 204 Vulnerabilities</a>
+  <div class="meta">SecurityWeek · News · Nov 18, 6:43 AM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span><span class="badge watch">chrome</span></div>
+</li><li class="card item" data-topics="cloud/M365|malware|identity" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="microsoft agent framework releases poisoned with credential stealer securityweek" data-published="2026-11-18T11:05:39+00:00">
+  <a class="title" href="https://www.securityweek.com/microsoft-agent-framework-releases-poisoned-with-credential-stealer/" rel="noopener noreferrer">Microsoft Agent Framework Releases Poisoned With Credential Stealer</a>
+  <div class="meta">SecurityWeek · News · Nov 18, 6:05 AM </div>
+  
+  <div class="badges"><span class="badge tag">cloud/M365</span><span class="badge tag">malware</span><span class="badge tag">identity</span></div>
+</li><li class="card item" data-topics="vulnerability" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="quality isn’t the main worry about ai pentesting — data privacy and production safety are the hacker news" data-published="2026-11-18T11:03:57+00:00">
+  <a class="title" href="https://thehackernews.com/2026/11/quality-isnt-main-worry-about-ai.html" rel="noopener noreferrer">Quality Isn’t The Main Worry About AI Pentesting — Data Privacy and Production Safety Are</a>
+  <div class="meta">The Hacker News · News · Nov 18, 6:03 AM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span></div>
+</li><li class="card item" data-topics="vulnerability" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="critical perforce puppet rce exploited in attacks securityweek" data-published="2026-11-18T10:37:08+00:00">
+  <a class="title" href="https://www.securityweek.com/critical-perforce-puppet-rce-exploited-in-attacks/" rel="noopener noreferrer">Critical Perforce Puppet RCE Exploited in Attacks</a>
+  <div class="meta">SecurityWeek · News · Nov 18, 5:37 AM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span></div>
+</li><li class="card item" data-topics="vulnerability" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="apache warns of roller rce vulnerability exploited in attacks bleepingcomputer" data-published="2026-11-18T10:35:05+00:00">
+  <a class="title" href="https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/" rel="noopener noreferrer">Apache warns of Roller RCE vulnerability exploited in attacks</a>
+  <div class="meta">BleepingComputer · News · Nov 18, 5:35 AM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span></div>
+</li><li class="card item watched" data-topics="" data-sectors="" data-regulations="" data-type="news" data-watch="1" data-search="microsoft announces windows server 2028 with hardened security bleepingcomputer" data-published="2026-11-18T09:24:31+00:00">
+  <a class="title" href="https://www.bleepingcomputer.com/news/microsoft/microsoft-announces-windows-server-2028-with-hardened-security/" rel="noopener noreferrer">Microsoft announces Windows Server 2028 with hardened security</a>
+  <div class="meta">BleepingComputer · News · Nov 18, 4:24 AM </div>
+  
+  <div class="badges"><span class="badge watch">windows</span></div>
+</li><li class="card item" data-topics="vulnerability" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="oracle patches 950 vulnerabilities with november 2026 cspu securityweek" data-published="2026-11-18T08:47:18+00:00">
+  <a class="title" href="https://www.securityweek.com/oracle-patches-640-vulnerabilities-with-november-2026-cspu/" rel="noopener noreferrer">Oracle Patches 950 Vulnerabilities With November 2026 CSPU</a>
+  <div class="meta">SecurityWeek · News · Nov 18, 3:47 AM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span></div>
+</li><li class="card item" data-topics="vulnerability" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="hackers exploiting critical puppet rce flaw affecting enterprise management servers the hacker news" data-published="2026-11-18T08:24:31+00:00">
+  <a class="title" href="https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html" rel="noopener noreferrer">Hackers Exploiting Critical Puppet RCE Flaw Affecting Enterprise Management Servers</a>
+  <div class="meta">The Hacker News · News · Nov 18, 3:24 AM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span></div>
+</li><li class="card item" data-topics="vulnerability" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="cisa urges immediate patching of java4shell flaw that could allow remote code execution the hacker news" data-published="2026-11-18T08:24:23+00:00">
+  <a class="title" href="https://thehackernews.com/2026/11/cisa-urges-immediate-patching-of.html" rel="noopener noreferrer">CISA Urges Immediate Patching of Java4Shell Flaw That Could Allow Remote Code Execution</a>
+  <div class="meta">The Hacker News · News · Nov 18, 3:24 AM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span></div>
+</li><li class="card item" data-topics="" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="british scattered spider hacker sentenced to 6 years in prison bleepingcomputer" data-published="2026-11-18T08:24:18+00:00">
+  <a class="title" href="https://www.bleepingcomputer.com/news/security/british-scattered-spider-hacker-sentenced-to-6-years-in-prison/" rel="noopener noreferrer">British Scattered Spider hacker sentenced to 6 years in prison</a>
+  <div class="meta">BleepingComputer · News · Nov 18, 3:24 AM </div>
+  
+  <div class="badges"></div>
+</li><li class="card item" data-topics="vulnerability" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="java4shell vulnerability puts enterprise applications at risk of takeover securityweek" data-published="2026-11-18T07:43:34+00:00">
+  <a class="title" href="https://www.securityweek.com/java4shell-vulnerability-puts-many-enterprise-applications-at-risk-of-takeover/" rel="noopener noreferrer">Java4Shell Vulnerability Puts Enterprise Applications at Risk of Takeover</a>
+  <div class="meta">SecurityWeek · News · Nov 18, 2:43 AM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span></div>
+</li><li class="card item grouped" data-topics="identity|malware" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="microsoft’s agent framework pypi package compromised to steal credentials bleepingcomputer attackers compromise microsoft&#x27;s agent framework pypi package to steal cloud credentials the hacker news" data-published="2026-11-18T16:58:42+00:00">
+  <a class="title" href="https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/" rel="noopener noreferrer">Microsoft’s Agent Framework PyPI package compromised to steal credentials</a>
+  <div class="meta">BleepingComputer · News · Nov 18, 1:45 AM <span class="sources-count">2 sources</span></div>
+  <div class="also">Also covered by <a href="https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html" rel="noopener noreferrer" title="Attackers Compromise Microsoft&#x27;s Agent Framework PyPI Package to Steal Cloud Credentials">The Hacker News</a></div>
+  <div class="badges"><span class="badge tag">identity</span><span class="badge tag">malware</span></div>
+</li><li class="card item" data-topics="data breach|nation-state" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="russian cold relic hackers use stolen google workspace data to breach second u.s. organization the hacker news" data-published="2026-11-18T05:58:04+00:00">
+  <a class="title" href="https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html" rel="noopener noreferrer">Russian COLD RELIC Hackers Use Stolen Google Workspace Data to Breach Second U.S. Organization</a>
+  <div class="meta">The Hacker News · News · Nov 18, 12:58 AM </div>
+  
+  <div class="badges"><span class="badge tag">data breach</span><span class="badge tag">nation-state</span></div>
+</li><li class="card item" data-topics="vulnerability|malware" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="attackers used optimizely to a/b test malware on top websites krebs on security" data-published="2026-11-18T02:52:04+00:00">
+  <a class="title" href="https://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/" rel="noopener noreferrer">Attackers Used Optimizely to A/B Test Malware on Top Websites</a>
+  <div class="meta">Krebs on Security · News · Nov 17, 9:52 PM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span><span class="badge tag">malware</span></div>
+</li><li class="card item" data-topics="vulnerability" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="critical java4shell flaw allows rce attacks on major java applications bleepingcomputer" data-published="2026-11-17T23:04:21+00:00">
+  <a class="title" href="https://www.bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications/" rel="noopener noreferrer">Critical Java4Shell flaw allows RCE attacks on major Java applications</a>
+  <div class="meta">BleepingComputer · News · Nov 17, 6:04 PM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span></div>
+</li><li class="card item" data-topics="malware" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="optimizely malware attacks highlight third-party vendor risks dark reading" data-published="2026-11-17T22:34:22+00:00">
+  <a class="title" href="https://www.darkreading.com/cyber-risk/optimizely-malware-attacks-third-party-vendor-risks" rel="noopener noreferrer">Optimizely Malware Attacks Highlight Third-Party Vendor Risks</a>
+  <div class="meta">Dark Reading · News · Nov 17, 5:34 PM </div>
+  
+  <div class="badges"><span class="badge tag">malware</span></div>
+</li><li class="card item" data-topics="malware" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="hundreds of websites deliver potent malware cocktail to unsuspecting visitors ars technica security" data-published="2026-11-17T22:32:16+00:00">
+  <a class="title" href="https://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites/" rel="noopener noreferrer">Hundreds of websites deliver potent malware cocktail to unsuspecting visitors</a>
+  <div class="meta">Ars Technica Security · News · Nov 17, 5:32 PM </div>
+  
+  <div class="badges"><span class="badge tag">malware</span></div>
+</li><li class="card item" data-topics="vulnerability|data breach|identity" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="cloud keys leaked in docker hub images are stolen within seconds bleepingcomputer" data-published="2026-11-17T21:27:17+00:00">
+  <a class="title" href="https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/" rel="noopener noreferrer">Cloud keys leaked in Docker Hub images are stolen within seconds</a>
+  <div class="meta">BleepingComputer · News · Nov 17, 4:27 PM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span><span class="badge tag">data breach</span><span class="badge tag">identity</span></div>
+</li><li class="card item" data-topics="phishing" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="&#x27;themailer&#x27; phishing kit puts ai in the driver&#x27;s seat dark reading" data-published="2026-11-17T20:58:13+00:00">
+  <a class="title" href="https://www.darkreading.com/perimeter/themailer-phishing-kit-ai-drivers-seat" rel="noopener noreferrer">&#x27;TheMailer&#x27; Phishing Kit Puts AI in the Driver&#x27;s Seat</a>
+  <div class="meta">Dark Reading · News · Nov 17, 3:58 PM </div>
+  
+  <div class="badges"><span class="badge tag">phishing</span></div>
+</li><li class="card item" data-topics="data breach" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="japan takes fugaku supercomputer offlline after cyberattack bleepingcomputer" data-published="2026-11-17T20:51:21+00:00">
+  <a class="title" href="https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/" rel="noopener noreferrer">Japan takes Fugaku supercomputer offlline after cyberattack</a>
+  <div class="meta">BleepingComputer · News · Nov 17, 3:51 PM </div>
+  
+  <div class="badges"><span class="badge tag">data breach</span></div>
+</li><li class="card item" data-topics="" data-sectors="" data-regulations="" data-type="news" data-watch="0" data-search="researchers claim two rce exploits that bypass telegram’s new android defenses the hacker news" data-published="2026-11-17T19:34:20+00:00">
+  <a class="title" href="https://thehackernews.com/2026/11/researchers-claim-two-rce-exploits-that.html" rel="noopener noreferrer">Researchers Claim Two RCE Exploits That Bypass Telegram’s New Android Defenses</a>
+  <div class="meta">The Hacker News · News · Nov 17, 2:34 PM </div>
+  
+  <div class="badges"></div>
+</li><li class="card item" data-topics="" data-sectors="" data-regulations="HIPAA" data-type="news" data-watch="0" data-search="hipaa updates and hipaa changes in 2026 the hipaa journal" data-published="2026-11-17T11:14:03+00:00">
+  <a class="title" href="https://www.hipaajournal.com/hipaa-updates-hipaa-changes/" rel="noopener noreferrer">HIPAA Updates and HIPAA Changes in 2026</a>
+  <div class="meta">The HIPAA Journal · News · Nov 17, 6:14 AM </div>
+  
+  <div class="badges"><span class="badge reg">HIPAA</span></div>
+</li></ul><p class="muted empty-msg" data-for="headlines" hidden>No stories match these filters.</p>
+<h2>Threat research <span class="h-count">7</span></h2>
+<ul class="list" id="research"><li class="card item" data-topics="malware" data-sectors="" data-regulations="" data-type="research" data-watch="0" data-search="the challenge of defending against bulletproof dead drops on public blockchains cisco talos" data-published="2026-11-18T11:00:00+00:00">
+  <a class="title" href="https://blog.talosintelligence.com/the-challenge-of-defending-against-bulletproof-dead-drops-on-public-blockchains/" rel="noopener noreferrer">The challenge of defending against bulletproof dead drops on public blockchains</a>
+  <div class="meta">Cisco Talos · Threat research · Nov 18, 6:00 AM </div>
+  
+  <div class="badges"><span class="badge tag">malware</span></div>
+</li><li class="card item watched" data-topics="" data-sectors="" data-regulations="" data-type="research" data-watch="1" data-search="uat-12643: suspected north korea-aligned actor blends blockchain resilience with targeted infostealing cisco talos" data-published="2026-11-18T11:00:00+00:00">
+  <a class="title" href="https://blog.talosintelligence.com/uat-12643-suspected-north-korea-aligned-actor-blends-blockchain-resilience-with-targeted-infostealing/" rel="noopener noreferrer">UAT-12643: Suspected North Korea-aligned actor blends blockchain resilience with targeted infostealing</a>
+  <div class="meta">Cisco Talos · Threat research · Nov 18, 6:00 AM </div>
+  
+  <div class="badges"><span class="badge watch">cisco</span></div>
+</li><li class="card item" data-topics="ransomware|data breach" data-sectors="" data-regulations="" data-type="research" data-watch="0" data-search="the forced audit: how auditteam’s opsagent framework masks ransomware as consulting kaspersky securelist" data-published="2026-11-18T07:00:07+00:00">
+  <a class="title" href="https://securelist.com/auditteam-opsagent-forced-audit/122031/" rel="noopener noreferrer">The forced audit: how AuditTeam’s OpsAgent framework masks ransomware as consulting</a>
+  <div class="meta">Kaspersky Securelist · Threat research · Nov 18, 2:00 AM </div>
+  
+  <div class="badges"><span class="badge tag">ransomware</span><span class="badge tag">data breach</span></div>
+</li><li class="card item" data-topics="" data-sectors="" data-regulations="" data-type="research" data-watch="0" data-search="isc stormcast for wednesday, november 18th, 2026 https://isc.sans.edu/podcastdetail/10184, (wed, nov 18th) sans internet storm center" data-published="2026-11-18T02:00:03+00:00">
+  <a class="title" href="https://isc.sans.edu/diary/rss/33528" rel="noopener noreferrer">ISC Stormcast For Wednesday, November 18th, 2026 https://isc.sans.edu/podcastdetail/10184, (Wed, Nov 18th)</a>
+  <div class="meta">SANS Internet Storm Center · Threat research · Nov 17, 9:00 PM </div>
+  
+  <div class="badges"></div>
+</li><li class="card item watched" data-topics="vulnerability" data-sectors="" data-regulations="" data-type="research" data-watch="1" data-search="cve-2026-114938: critical vulnerability in openjdk java cisco talos" data-published="2026-11-18T01:53:03+00:00">
+  <a class="title" href="https://blog.talosintelligence.com/java4shell/" rel="noopener noreferrer">CVE-2026-114938: Critical vulnerability in OpenJDK Java</a>
+  <div class="meta">Cisco Talos · Threat research · Nov 17, 8:53 PM </div>
+  
+  <div class="badges"><span class="badge tag">vulnerability</span><span class="badge watch">cisco</span></div>
+</li><li class="card item" data-topics="ransomware" data-sectors="" data-regulations="" data-type="research" data-watch="0" data-search="the state of ransomware q3 2026 check point research" data-published="2026-11-17T22:01:28+00:00">
+  <a class="title" href="https://research.checkpoint.com/2026/the-state-of-ransomware-q3-2026/" rel="noopener noreferrer">The State of Ransomware Q3 2026</a>
+  <div class="meta">Check Point Research · Threat research · Nov 17, 5:01 PM </div>
+  
+  <div class="badges"><span class="badge tag">ransomware</span></div>
+</li><li class="card item" data-topics="" data-sectors="" data-regulations="" data-type="research" data-watch="0" data-search="borrowed code, real consequences: what optimjack teaches us palo alto unit 42" data-published="2026-11-17T20:43:14+00:00">
+  <a class="title" href="https://unit42.paloaltonetworks.com/optimjack-supply-chain-attack/" rel="noopener noreferrer">Borrowed Code, Real Consequences: What OPTIMJACK Teaches Us</a>
+  <div class="meta">Palo Alto Unit 42 · Threat research · Nov 17, 3:43 PM </div>
+  
+  <div class="badges"></div>
+</li></ul><p class="muted empty-msg" data-for="research" hidden>No stories match these filters.</p>
+<details class="health"><summary>Source status · 18 of 19 healthy</summary><table><tr><td>CISA Known Exploited Vulnerabilities</td><td><span class="badge ok">ok</span></td><td class="muted">7 new · catalog 2026.11.18</td></tr><tr><td>BleepingComputer</td><td><span class="badge ok">ok</span></td><td class="muted">15 new · newest post Nov 18</td></tr><tr><td>The Hacker News</td><td><span class="badge ok">ok</span></td><td class="muted">19 new · newest post Nov 18</td></tr><tr><td>The Record</td><td><span class="badge ok">ok</span></td><td class="muted">5 new · newest post Nov 18</td></tr><tr><td>SecurityWeek</td><td><span class="badge ok">ok</span></td><td class="muted">10 new · newest post Nov 18</td></tr><tr><td>Dark Reading</td><td><span class="badge ok">ok</span></td><td class="muted">8 new · newest post Nov 18</td></tr><tr><td>Krebs on Security</td><td><span class="badge ok">ok</span></td><td class="muted">1 new · newest post Nov 17</td></tr><tr><td>Ars Technica Security</td><td><span class="badge ok">ok</span></td><td class="muted">2 new · newest post Nov 17</td></tr><tr><td>The HIPAA Journal</td><td><span class="badge ok">ok</span></td><td class="muted">4 new · newest post Nov 18</td></tr><tr><td>Microsoft Security blog</td><td><span class="badge ok">ok</span></td><td class="muted">3 new · newest post Nov 17</td></tr><tr><td>Cisco Talos</td><td><span class="badge ok">ok</span></td><td class="muted">3 new · newest post Nov 18</td></tr><tr><td>Palo Alto Unit 42</td><td><span class="badge ok">ok</span></td><td class="muted">2 new · newest post Nov 17</td></tr><tr><td>Check Point Research</td><td><span class="badge ok">ok</span></td><td class="muted">1 new · newest post Nov 17</td></tr><tr><td>Sophos News</td><td><span class="badge danger">error</span></td><td class="muted">HTTPSConnectionPool(host=&#x27;www.sophos.com&#x27;, port=443): Read timed out. (read timeout=20)</td></tr><tr><td>Kaspersky Securelist</td><td><span class="badge ok">ok</span></td><td class="muted">3 new · newest post Nov 18</td></tr><tr><td>ESET WeLiveSecurity</td><td><span class="badge ok">ok</span></td><td class="muted">0 new · newest post Nov 16</td></tr><tr><td>SANS Internet Storm Center</td><td><span class="badge ok">ok</span></td><td class="muted">3 new · newest post Nov 17</td></tr><tr><td>UK NCSC</td><td><span class="badge ok">ok</span></td><td class="muted">1 new · newest post Nov 17</td></tr><tr><td>Schneier on Security</td><td><span class="badge ok">ok</span></td><td class="muted">2 new · newest post Nov 18</td></tr></table><p class="hint">"Stale" means the newest post in a feed is more than 30 days old: the feed address may have changed.</p></details>
+</main>
+<footer>
+  <p>Built by Shanna Staartjes. Headlines link to the original sources; summaries are not republished.
+  Vulnerability data: CISA Known Exploited Vulnerabilities catalog. Sector and regulation tags are keyword-based hints, not compliance advice.</p>
+</footer>
+<script type="application/json" id="profiles-data">[{"name": "Healthcare / HIPAA", "match": "any", "watch": false, "q": "", "topics": [], "sectors": ["healthcare"], "regulations": ["HIPAA"], "types": []}, {"name": "Payments / PCI DSS", "match": "any", "watch": false, "q": "", "topics": [], "sectors": ["finance", "retail/e-commerce"], "regulations": ["PCI DSS"], "types": []}, {"name": "GRC and compliance", "match": "any", "watch": false, "q": "", "topics": [], "sectors": [], "regulations": ["HIPAA", "PCI DSS", "GDPR", "SEC disclosure", "NIST / CMMC / FedRAMP", "ISO 27001 / SOC 2", "NIS2 / DORA", "privacy laws (US)", "breach notification"], "types": []}, {"name": "SOC analyst", "match": "any", "watch": false, "q": "", "topics": ["malware", "phishing", "ransomware", "identity"], "sectors": [], "regulations": [], "types": []}, {"name": "Microsoft 365 admin", "match": "any", "watch": false, "q": "", "topics": ["cloud/M365", "identity"], "sectors": [], "regulations": [], "types": []}, {"name": "Vulnerability management", "match": "any", "watch": false, "q": "", "topics": ["vulnerability"], "sectors": [], "regulations": [], "types": []}, {"name": "Public sector and education", "match": "any", "watch": false, "q": "", "topics": [], "sectors": ["government", "education"], "regulations": ["NIST / CMMC / FedRAMP"], "types": []}, {"name": "Threat research only", "match": "any", "watch": false, "q": "", "topics": [], "sectors": [], "regulations": [], "types": ["research"]}]</script>
+<script src="../app.js"></script>
+</body>
+</html>
