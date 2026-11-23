@@ -1,0 +1,892 @@
+{
+  "date": "2026-11-23",
+  "items": [
+    {
+      "id": "5e4209ae374025b4",
+      "title": "Hackers breach Austrian Foreign Ministry website, access diplomats' contact details",
+      "link": "https://therecord.media/austrian-foreign-ministry-says-website-hacked",
+      "source": "The Record",
+      "type": "news",
+      "published": "2026-11-23T22:37:19.592029+00:00",
+      "tags": [
+        "data breach"
+      ],
+      "sectors": [
+        "government"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "6a57f5edfd55bc34",
+      "title": "Industrial Serial Gateways Broadcast That They're Insecure",
+      "link": "https://www.darkreading.com/ics-ot-security/industrial-serial-gateways-broadcast-insecure",
+      "source": "Dark Reading",
+      "type": "news",
+      "published": "2026-11-23T22:02:46+00:00",
+      "tags": [],
+      "sectors": [
+        "manufacturing"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "adc0fa1468e4ced6",
+      "title": "CrowdStrike Makes AI Security Push With Blockbuster Zscaler Deal",
+      "link": "https://www.darkreading.com/endpoint-security/crowdstrike-ai-security-push-zscaler-deal",
+      "source": "Dark Reading",
+      "type": "news",
+      "published": "2026-11-23T21:21:42+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "539662308b71843d",
+      "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
+      "link": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
+      "source": "BleepingComputer",
+      "type": "news",
+      "published": "2026-11-23T20:54:51+00:00",
+      "tags": [
+        "data breach"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "c01f8c41d8fc5759",
+      "title": "US Cyber Director Pick Signals Shift Toward Expertise",
+      "link": "https://www.darkreading.com/cybersecurity-operations/us-cyber-director-pick-signals-shift-toward-expertise",
+      "source": "Dark Reading",
+      "type": "news",
+      "published": "2026-11-23T20:13:48+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "5fd9301f69d64abe",
+      "title": "OpenRouter drops AI providers over leaked prompts and secrets",
+      "link": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
+      "source": "BleepingComputer",
+      "type": "news",
+      "published": "2026-11-23T20:00:20+00:00",
+      "tags": [
+        "data breach"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "f359e02609983b08",
+      "title": "Microsoft Azure flaw exploited to steal customers' API credentials",
+      "link": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
+      "source": "BleepingComputer",
+      "type": "news",
+      "published": "2026-11-23T19:42:20+00:00",
+      "tags": [
+        "cloud/M365",
+        "vulnerability",
+        "identity"
+      ],
+      "sectors": [
+        "critical infrastructure"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "4ec5c1ff807c65f0",
+      "title": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
+      "link": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
+      "source": "BleepingComputer",
+      "type": "news",
+      "published": "2026-11-23T18:38:40+00:00",
+      "tags": [
+        "data breach"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "6edcda57ebaecc84",
+      "title": "Signal blocks screenshots by Apple, Google operating systems to protect data from AI agents",
+      "link": "https://therecord.media/signal-no-screenshots-by-apple-google-operating-systems",
+      "source": "The Record",
+      "type": "news",
+      "published": "2026-11-23T18:37:00+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "4ca5a6cc42e6642a",
+      "title": "FBI reportedly facing second data breach involving National Crime Information Center",
+      "link": "https://therecord.media/fbi-cyberattack-data-breach",
+      "source": "The Record",
+      "type": "news",
+      "published": "2026-11-23T18:30:00+00:00",
+      "tags": [
+        "data breach"
+      ],
+      "sectors": [
+        "government"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "5e9db5537b61e7b8",
+      "title": "Behind the Alias: How One Researcher Unmasked a Decade of Ransomware Actors",
+      "link": "https://www.darkreading.com/cybersecurity-operations/alias-researcher-unmasked-ransomware-actors",
+      "source": "Dark Reading",
+      "type": "news",
+      "published": "2026-11-23T17:45:52+00:00",
+      "tags": [
+        "ransomware"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "1ab128c432ff969e",
+      "title": "Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access",
+      "link": "https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html",
+      "source": "The Hacker News",
+      "type": "news",
+      "published": "2026-11-23T17:45:15+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": [
+        "vpn"
+      ]
+    },
+    {
+      "id": "c23cd2a7d9a6c495",
+      "title": "CrowdStrike to purchase Zscaler for $43.9 billion",
+      "link": "https://therecord.media/crowdstrike-zscaler",
+      "source": "The Record",
+      "type": "news",
+      "published": "2026-11-23T17:14:00+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "0222d2dac1874ef9",
+      "title": "GlobeTopper loses $2.5 million after hackers steal $70k in gift cards",
+      "link": "https://www.bleepingcomputer.com/news/security/globetopper-loses-25-million-after-hackers-steal-70k-in-gift-cards/",
+      "source": "BleepingComputer",
+      "type": "news",
+      "published": "2026-11-23T16:50:01+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "f1ad342921358c94",
+      "title": "AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes",
+      "link": "https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes",
+      "source": "Dark Reading",
+      "type": "news",
+      "published": "2026-11-23T16:17:21+00:00",
+      "tags": [
+        "vulnerability"
+      ],
+      "sectors": [
+        "healthcare",
+        "education"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "8b8ea1bfa40ae189",
+      "title": "Azure Flaw Exploited to Target Secrets at Norwegian Energy Firms",
+      "link": "https://www.securityweek.com/azure-flaw-exploited-to-target-secrets-at-norwegian-energy-firms/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-23T15:47:40+00:00",
+      "tags": [
+        "cloud/M365",
+        "vulnerability"
+      ],
+      "sectors": [
+        "critical infrastructure"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "bcc6ff74f5232787",
+      "title": "Norway says hackers exploited Microsoft security flaw to attack energy firms Equinor, Skagerak Energi",
+      "link": "https://therecord.media/norway-microsoft-cyberattack-equinor",
+      "source": "The Record",
+      "type": "news",
+      "published": "2026-11-23T15:45:00+00:00",
+      "tags": [
+        "vulnerability",
+        "identity"
+      ],
+      "sectors": [
+        "critical infrastructure"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "ca0d1bdeb307b963",
+      "title": "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble",
+      "link": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
+      "source": "The Hacker News",
+      "type": "news",
+      "published": "2026-11-23T15:10:48+00:00",
+      "tags": [
+        "vulnerability",
+        "data breach"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "b82574ac69fb77be",
+      "title": "N-able Patches Critical Flaw Disclosed After Mail Assure Cyberattack",
+      "link": "https://www.securityweek.com/n-able-patches-critical-flaw-disclosed-after-mail-assure-cyberattack/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-23T15:06:49+00:00",
+      "tags": [
+        "vulnerability"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "376b263259641044",
+      "title": "AI Agents Are Creating a Shared Responsibility Gap",
+      "link": "https://www.bleepingcomputer.com/news/security/ai-agents-are-creating-a-shared-responsibility-gap/",
+      "source": "BleepingComputer",
+      "type": "news",
+      "published": "2026-11-23T15:00:10+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "518fa40826b6669b",
+      "title": "phpAfterShell Vulnerability Revives PHP2Shell’s Attack Path",
+      "link": "https://www.securityweek.com/phpaftershell-vulnerability-revives-php2shells-attack-path/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-23T13:58:07+00:00",
+      "tags": [
+        "vulnerability"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "8a6751bb9c7a84ba",
+      "title": "Prism Medical Products Data Breach Affects 1.3 Million Individuals",
+      "link": "https://www.hipaajournal.com/prism-medical-products-data-breach/",
+      "source": "The HIPAA Journal",
+      "type": "news",
+      "published": "2026-11-23T13:51:26+00:00",
+      "tags": [
+        "data breach"
+      ],
+      "sectors": [
+        "healthcare"
+      ],
+      "regulations": [
+        "HIPAA"
+      ],
+      "watch": []
+    },
+    {
+      "id": "d7f5ff28c39dce09",
+      "title": "Zero-day Flaw in Medical Imaging App Identified and Exploited AI Agents",
+      "link": "https://www.hipaajournal.com/zero-day-flaw-medical-imaging-app-identified-exploited-ai-agents/",
+      "source": "The HIPAA Journal",
+      "type": "news",
+      "published": "2026-11-23T13:45:46+00:00",
+      "tags": [
+        "vulnerability"
+      ],
+      "sectors": [
+        "healthcare"
+      ],
+      "regulations": [
+        "HIPAA"
+      ],
+      "watch": []
+    },
+    {
+      "id": "6dad11c2094e6580",
+      "title": "Microsoft testing fix for Windows 11 Bluetooth audio quality drops",
+      "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-fix-for-windows-11-bluetooth-audio-quality-drops/",
+      "source": "BleepingComputer",
+      "type": "news",
+      "published": "2026-11-23T13:28:45+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": [
+        "windows"
+      ]
+    },
+    {
+      "id": "66c2ddeb077b472e",
+      "title": "GL.iNet Routers, KVMs Compromised via Remote Management Service Flaw",
+      "link": "https://www.securityweek.com/gl-inet-routers-kvms-compromised-via-remote-management-service-flaw/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-23T13:26:22+00:00",
+      "tags": [
+        "vulnerability",
+        "malware"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "cb673b121b80fca4",
+      "title": "Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions",
+      "link": "https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html",
+      "source": "The Hacker News",
+      "type": "news",
+      "published": "2026-11-23T13:22:20+00:00",
+      "tags": [
+        "vulnerability"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "33d65726f50ee8a4",
+      "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning",
+      "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html",
+      "source": "The Hacker News",
+      "type": "news",
+      "published": "2026-11-23T12:41:04+00:00",
+      "tags": [
+        "vulnerability"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "759d50b40080dffe",
+      "title": "N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation",
+      "link": "https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html",
+      "source": "The Hacker News",
+      "type": "news",
+      "published": "2026-11-23T12:28:09+00:00",
+      "tags": [
+        "vulnerability",
+        "data breach"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "4cbdeef573c788e9",
+      "title": "AI Inference Providers Failed to Detect Hacking and Prompt Theft, Says Dragos",
+      "link": "https://www.securityweek.com/ai-inference-providers-failed-to-detect-hacking-and-prompt-theft-says-dragos/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-23T12:16:20+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "09da74a67098fab3",
+      "title": "Call center operator gets 8 years for helping scam 30,000 Americans",
+      "link": "https://www.bleepingcomputer.com/news/security/call-center-operator-gets-8-years-for-helping-scam-30-000-americans/",
+      "source": "BleepingComputer",
+      "type": "news",
+      "published": "2026-11-23T12:02:23+00:00",
+      "tags": [],
+      "sectors": [
+        "government"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "2a48f9c8ed410a5f",
+      "title": "Humans Have Rights. Machines Do Not.",
+      "link": "https://www.schneier.com/blog/archives/2026/11/humans-have-rights-machines-do-not.html",
+      "source": "Schneier on Security",
+      "type": "analysis",
+      "published": "2026-11-23T12:00:54+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "e603c8c48d1fe4a6",
+      "title": "BadBox 3.0 Ad Fraud Operation Generating 40 Billion Daily Bid Requests Disrupted",
+      "link": "https://www.securityweek.com/badbox-3-0-ad-fraud-operation-generating-40-billion-daily-bid-requests-disrupted/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-23T11:44:18+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "128a5b25cbed4725",
+      "title": "SAP NetWeaver, Cisco Expressway Flaws Exploited in Attacks",
+      "link": "https://www.securityweek.com/sap-netweaver-cisco-expressway-flaws-exploited-in-attacks/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-23T11:35:15+00:00",
+      "tags": [
+        "vulnerability"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": [
+        "cisco"
+      ]
+    },
+    {
+      "id": "34f6ad6deda2c43d",
+      "title": "CrowdStrike to Acquire Zscaler in $43.9 Billion Deal",
+      "link": "https://www.securityweek.com/crowdstrike-to-acquire-zscaler-in-43-9-billion-deal/",
+      "source": "SecurityWeek",
+      "type": "news",
+      "published": "2026-11-23T11:31:44+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "83eff4a72dda7fa6",
+      "title": "Black Friday, red flags: too-good-to-be-true deals hiding real threats",
+      "link": "https://securelist.com/black-friday-threat-report-2026/122061/",
+      "source": "Kaspersky Securelist",
+      "type": "research",
+      "published": "2026-11-23T10:00:43+00:00",
+      "tags": [
+        "phishing",
+        "malware"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "31afdc96e80bb016",
+      "title": "Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE",
+      "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html",
+      "source": "The Hacker News",
+      "type": "news",
+      "published": "2026-11-23T09:11:56+00:00",
+      "tags": [
+        "vulnerability"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "b0e51417b8a48af5",
+      "title": "Microsoft confirms Windows printing issues affecting Forcepoint users",
+      "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-printing-issues-after-kb5132043-windows-hotpatch/",
+      "source": "BleepingComputer",
+      "type": "news",
+      "published": "2026-11-23T09:11:15+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": [
+        "windows"
+      ]
+    },
+    {
+      "id": "791422e9c3235070",
+      "title": "Hackers Exploited GL.iNet Cloud Flaw to Install Malware on Routers and KVM Devices",
+      "link": "https://thehackernews.com/2026/11/hackers-exploited-glinet-cloud-flaw-to.html",
+      "source": "The Hacker News",
+      "type": "news",
+      "published": "2026-11-23T09:04:08+00:00",
+      "tags": [
+        "vulnerability",
+        "malware"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "80927b607c9d99a7",
+      "title": "AI-Assisted Cyber Attacks Trigger Unauthorized Payments at Indian Banks and Fintech Firms",
+      "link": "https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html",
+      "source": "The Hacker News",
+      "type": "news",
+      "published": "2026-11-23T08:24:15+00:00",
+      "tags": [],
+      "sectors": [
+        "finance"
+      ],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "fa64bc0af999ebfa",
+      "title": "CISA flags critical Cisco RCE flaw as actively exploited in attacks",
+      "link": "https://www.bleepingcomputer.com/news/security/cisa-flags-critical-cisco-expressway-rce-flaw-as-actively-exploited/",
+      "source": "BleepingComputer",
+      "type": "news",
+      "published": "2026-11-23T07:44:19+00:00",
+      "tags": [
+        "vulnerability"
+      ],
+      "sectors": [
+        "government"
+      ],
+      "regulations": [],
+      "watch": [
+        "cisco"
+      ]
+    },
+    {
+      "id": "4a7e4b34034f604c",
+      "title": "ISC Stormcast For Monday, November 23rd, 2026 https://isc.sans.edu/podcastdetail/10190, (Mon, Nov 23rd)",
+      "link": "https://isc.sans.edu/diary/rss/33548",
+      "source": "SANS Internet Storm Center",
+      "type": "research",
+      "published": "2026-11-23T02:00:04+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "32066f88a6bcc634",
+      "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
+      "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
+      "source": "BleepingComputer",
+      "type": "news",
+      "published": "2026-11-22T18:45:37+00:00",
+      "tags": [
+        "vulnerability",
+        "malware"
+      ],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    },
+    {
+      "id": "f6ee8bdc262f5053",
+      "title": "A brief history of syslog timestamps, (Sun, Nov 22nd)",
+      "link": "https://isc.sans.edu/diary/rss/33530",
+      "source": "SANS Internet Storm Center",
+      "type": "research",
+      "published": "2026-11-22T18:40:18+00:00",
+      "tags": [],
+      "sectors": [],
+      "regulations": [],
+      "watch": []
+    }
+  ],
+  "kev": [
+    {
+      "cve": "CVE-2026-134624",
+      "vendor": "N-able",
+      "product": "MailAssure",
+      "name": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
+      "description": "N-able MailAssure (SpamExperts) contains a server-side request forgery vulnerability in the LDAP synchronization connection check that allows an authenticated API user to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-23",
+      "due": "2026-11-26",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-133968",
+      "vendor": "Project MONAI",
+      "product": "MONAI Label",
+      "name": "Project MONAI MONAI Label Path Traversal Vulnerability",
+      "description": "Project MONAI MONAI Label contains a path traversal vulnerability that allows an unauthenticated remote attacker to write arbitrary files outside the intended datastore directory, potentially resulting in remote code execution.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-23",
+      "due": "2026-11-26",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-76466",
+      "vendor": "Cisco",
+      "product": "Expressway Series",
+      "name": "Cisco Expressway Series Use of Hard-coded Credentials Vulnerability",
+      "description": "Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-20",
+      "due": "2026-11-23",
+      "ransomware": false,
+      "watch": [
+        "cisco"
+      ]
+    },
+    {
+      "cve": "CVE-2026-129448",
+      "vendor": "Apache",
+      "product": "Roller",
+      "name": "Apache Roller Deserialization of Untrusted Data Vulnerability",
+      "description": "Apache Roller contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint, which accepts and deserializes vendor extension types before authentication. This CVE covers the same underlying vulnerability as CVE-2026-82384 but applies to a broader range of affected versions.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-20",
+      "due": "2026-11-23",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-123890",
+      "vendor": "Broadcom",
+      "product": "VMware vCenter",
+      "name": "VMWare vCenter Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+      "description": "Broadcom VMware vCenter contains an authentication bypass using an alternate path or channel vulnerability in the VMware Directory Service that allows an unauthenticated attacker with network access to vCenter to bypass authentication and gain unauthorized access to the system.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines",
+      "added": "2026-11-20",
+      "due": "2026-11-23",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2025-42884",
+      "vendor": "SAP",
+      "product": "NetWeaver",
+      "name": "SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability",
+      "description": "SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment properties or a URL used during JNDI lookup operations.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-20",
+      "due": "2026-11-23",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-90817",
+      "vendor": "Vanderbilt University",
+      "product": "Research Electronic Data Capture (REDCap)",
+      "name": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability",
+      "description": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import processing. Exploitation requires knowledge of a valid public survey hash.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-18",
+      "due": "2026-11-21",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-90436",
+      "vendor": "Apache",
+      "product": "Axis",
+      "name": "Apache Axis Unsafe Reflection Vulnerability",
+      "description": "Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-18",
+      "due": "2026-11-21",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-40217",
+      "vendor": "BerriAI",
+      "product": "LiteLLM",
+      "name": "BerriAI LiteLLM Unprotected Alternate Channel Vulnerability",
+      "description": "BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-18",
+      "due": "2026-12-02",
+      "ransomware": false,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2024-10441",
+      "vendor": "Synology",
+      "product": "DiskStation Manager (DSM)",
+      "name": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability",
+      "description": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-18",
+      "due": "2026-11-21",
+      "ransomware": true,
+      "watch": []
+    },
+    {
+      "cve": "CVE-2026-115731",
+      "vendor": "Perforce",
+      "product": "Puppet Enterprise",
+      "name": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
+      "description": "Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet’s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the service user by submitting a report containing a crafted rich-data type through a PUT request. If the certificate authority automatically signs requests without strong verification, an unauthenticated network attacker can obtain a valid certificate and exploit the vulnerability.",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "added": "2026-11-17",
+      "due": "2026-12-01",
+      "ransomware": false,
+      "watch": []
+    }
+  ],
+  "health": [
+    {
+      "id": "cisa-kev",
+      "name": "CISA Known Exploited Vulnerabilities",
+      "status": "ok",
+      "items": 11,
+      "catalog_version": "2026.11.23"
+    },
+    {
+      "id": "bleepingcomputer",
+      "name": "BleepingComputer",
+      "status": "ok",
+      "items": 14,
+      "newest": "2026-11-23T20:54:51+00:00"
+    },
+    {
+      "id": "the-hacker-news",
+      "name": "The Hacker News",
+      "status": "ok",
+      "items": 10,
+      "newest": "2026-11-23T17:45:15+00:00"
+    },
+    {
+      "id": "the-record",
+      "name": "The Record",
+      "status": "ok",
+      "items": 5,
+      "newest": "2026-11-23T22:37:19.592029+00:00"
+    },
+    {
+      "id": "securityweek",
+      "name": "SecurityWeek",
+      "status": "ok",
+      "items": 9,
+      "newest": "2026-11-23T15:47:40+00:00"
+    },
+    {
+      "id": "dark-reading",
+      "name": "Dark Reading",
+      "status": "ok",
+      "items": 5,
+      "newest": "2026-11-23T22:02:46+00:00"
+    },
+    {
+      "id": "krebs",
+      "name": "Krebs on Security",
+      "status": "ok",
+      "items": 0,
+      "newest": "2026-11-21T00:36:39+00:00"
+    },
+    {
+      "id": "ars-security",
+      "name": "Ars Technica Security",
+      "status": "ok",
+      "items": 0,
+      "newest": "2026-11-20T20:59:08+00:00"
+    },
+    {
+      "id": "hipaa-journal",
+      "name": "The HIPAA Journal",
+      "status": "ok",
+      "items": 2,
+      "newest": "2026-11-23T13:51:26+00:00"
+    },
+    {
+      "id": "microsoft-security-blog",
+      "name": "Microsoft Security blog",
+      "status": "ok",
+      "items": 0,
+      "newest": "2026-11-20T17:00:00+00:00"
+    },
+    {
+      "id": "talos",
+      "name": "Cisco Talos",
+      "status": "ok",
+      "items": 0,
+      "newest": "2026-11-19T19:00:00+00:00"
+    },
+    {
+      "id": "unit42",
+      "name": "Palo Alto Unit 42",
+      "status": "ok",
+      "items": 0,
+      "newest": "2026-11-20T22:00:25+00:00"
+    },
+    {
+      "id": "checkpoint-research",
+      "name": "Check Point Research",
+      "status": "ok",
+      "items": 0,
+      "newest": "2026-11-19T13:19:10+00:00"
+    },
+    {
+      "id": "sophos",
+      "name": "Sophos News",
+      "status": "error",
+      "items": 0,
+      "error": "HTTPSConnectionPool(host='www.sophos.com', port=443): Read timed out. (read timeout=20)"
+    },
+    {
+      "id": "securelist",
+      "name": "Kaspersky Securelist",
+      "status": "ok",
+      "items": 1,
+      "newest": "2026-11-23T10:00:43+00:00"
+    },
+    {
+      "id": "welivesecurity",
+      "name": "ESET WeLiveSecurity",
+      "status": "ok",
+      "items": 0,
+      "newest": "2026-11-19T08:00:00+00:00"
+    },
+    {
+      "id": "sans-isc",
+      "name": "SANS Internet Storm Center",
+      "status": "ok",
+      "items": 2,
+      "newest": "2026-11-23T02:00:04+00:00"
+    },
+    {
+      "id": "ncsc-uk",
+      "name": "UK NCSC",
+      "status": "ok",
+      "items": 0,
+      "newest": "2026-11-17T12:00:00+00:00"
+    },
+    {
+      "id": "schneier",
+      "name": "Schneier on Security",
+      "status": "ok",
+      "items": 1,
+      "newest": "2026-11-23T12:00:54+00:00"
+    }
+  ],
+  "generated_at": "2026-11-23T22:37:19.592029+00:00"
+}
